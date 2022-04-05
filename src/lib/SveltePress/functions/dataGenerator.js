@@ -6,8 +6,8 @@ import Config from '../sveltePress.config.js';
 
 export default function createPressData(
 	source = 'pages/',
-	generateIndex = false,
-	generateSearchIndex = false,
+	generateIndex = true,
+	generateSearchIndex = true,
 	recursive = false
 ) {
 	const data = new Map([

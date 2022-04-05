@@ -2,13 +2,13 @@ import sveltePreprocess from 'svelte-preprocess';
 import {config as themeConfig} from './src/lib/SveltePress/theme/meta/svelte.config.js';
 // Pick one of the adapters listed below
 // or install and use others
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-node';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     kit: {
         // Use your desired adapter
-        adapter: vercel(),
+        adapter: adapter({out: 'build'}),
         vite: () => ({
             // Purges too much, disabled for now
             // plugins: [process.env.NODE_ENV === 'production' && optimizeCss()],
