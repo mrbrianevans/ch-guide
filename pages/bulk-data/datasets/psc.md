@@ -4,4 +4,6 @@ postName: Persons with Significant Control
 
 # Bulk PSC data
 
-the psc data available as one big file. JSON lines
+PSC bulk download: http://download.companieshouse.gov.uk/en_pscdata.html
+
+The file is ndjson format (new line deliminated JSON).
