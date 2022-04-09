@@ -5,7 +5,7 @@
 	import Typewriter from "svelte-typewriter";
 	import Config from "$lib/SveltePress/sveltePress.config";
 
-	import { Button, Column, Grid, Link, Row, Tile } from "carbon-components-svelte";
+	import { Button, ClickableTile, Column, Grid, InlineNotification, Link, Row, Tile } from "carbon-components-svelte";
 	import ArrowRight32 from "carbon-icons-svelte/lib/ArrowRight32";
 	import ArrowDown32 from "carbon-icons-svelte/lib/ArrowDown32";
 
@@ -44,6 +44,14 @@
 </svelte:head>
 
 <div class="main">
+	<Tile>
+		<InlineNotification
+			hideCloseButton
+			kind="warning"
+			subtitle="Website not yet complete"
+			title="Under development:" />
+		<p>This website is being actively developed and some pages may be incomplete. If you would like to contribute, please see the GitHub page <Link href="https://github.com/mrbrianevans/ch-guide">github.com/mrbrianevans/ch-guide</Link></p>
+	</Tile>
 	<div class="sp--header">
 		<Grid class="sp--grid" padding>
 			<Row>
@@ -100,31 +108,28 @@
 		<Grid condensed padding>
 			<Row class="sp--header--tiles">
 				<Column md sm={breakpoints.sm}>
-					<Tile class="sp--tile">
+					<ClickableTile class="sp--tile" href="/rest-api">
 						<h2 class="tile--title">RESTful API</h2>
 						<h4>
 							Documentation for the REST API to request data about a company or person.
 						</h4>
-						<Link href="/rest-api">View docs</Link>
-					</Tile>
+					</ClickableTile>
 				</Column>
 				<Column md sm={breakpoints.sm}>
-					<Tile class="sp--tile"
+					<ClickableTile class="sp--tile" href="/streams"
 					><h2 class="tile--title">Streaming API</h2>
 						<h4>
 							HTTP streaming API for live events such as company filings.
 						</h4>
-						<Link href="/streams">View docs</Link>
-					</Tile>
+					</ClickableTile>
 				</Column>
 				<Column md sm={breakpoints.sm}>
-					<Tile class="sp--tile"
+					<ClickableTile class="sp--tile" href="/bulk-data"
 					><h2 class="tile--title">Bulk Data Files</h2>
 						<h4>
 							Bulk data files allow you to start your own database of companies house data.
 						</h4>
-						<Link href="/bulk-data">View docs</Link>
-					</Tile>
+					</ClickableTile>
 				</Column>
 			</Row>
 			<Row class="sp--arrow--down">

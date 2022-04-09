@@ -90,11 +90,6 @@
       {/each}
     {/if}
   </HeaderNav>
-  <InlineNotification
-    hideCloseButton
-    kind="warning"
-    subtitle="Website not yet complete"
-    title="Under development:" />
   <HeaderUtilities>
     <Search />
     <div class="sp--theme-switcher-button">

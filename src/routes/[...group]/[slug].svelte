@@ -78,7 +78,9 @@
 </svelte:head>
 
 <Content meta={post.meta} pagination={post.pagination}>
-  <p>Posted on {Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(new Date(post.meta.date))}
+  <p>
+<!--    commented out until the date is accurate. Need to get modified date from Git log -->
+<!--    Posted on {Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(new Date(post.meta.date))}-->
     {#if post.meta.tags}
       {#each post.meta.tags as tag}
         <Tag>{tag}</Tag>
