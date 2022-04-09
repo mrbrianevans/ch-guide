@@ -1,5 +1,10 @@
 ---
 postName: Officers
+tags: 
+    - officers
+    - directors
+    - secretary
+description: A guide to using the officers bulk data file from Companies House.
 ---
 
 # Officers data

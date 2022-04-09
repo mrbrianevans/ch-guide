@@ -2,7 +2,7 @@
   "name": "sveltepress",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node scripts/generateProdData.js && svelte-kit dev",
+    "dev": "node scripts/generateProdData.js && svelte-kit dev -p 5002",
     "build": "node scripts/generateProdData.js && svelte-kit build",
     "start": "node build",
     "preview": "svelte-kit preview",

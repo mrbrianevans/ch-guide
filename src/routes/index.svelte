@@ -2,20 +2,20 @@
 	// index.svelte has to be as self-contained as possible
 	// so users can easily remove it
 
-	import Typewriter from 'svelte-typewriter';
-	import Config from '$lib/SveltePress/sveltePress.config';
+	import Typewriter from "svelte-typewriter";
+	import Config from "$lib/SveltePress/sveltePress.config";
 
-	import {Button, Column, Grid, Row, Tile} from 'carbon-components-svelte';
-	import ArrowRight32 from 'carbon-icons-svelte/lib/ArrowRight32';
-	import ArrowDown32 from 'carbon-icons-svelte/lib/ArrowDown32';
+	import { Button, Column, Grid, Link, Row, Tile } from "carbon-components-svelte";
+	import ArrowRight32 from "carbon-icons-svelte/lib/ArrowRight32";
+	import ArrowDown32 from "carbon-icons-svelte/lib/ArrowDown32";
 
-	import {session} from '$app/stores';
+	import { session } from "$app/stores";
 	// Logo animation
-	import {draw} from 'svelte/transition';
+	import { draw } from "svelte/transition";
 
 	$: nav = Config.nav.overwrite
-			? Config.nav.items || []
-			: $session.get('navbar').concat(Config.nav.items || []);
+		? Config.nav.items || []
+		: $session.get("navbar").concat(Config.nav.items || []);
 
 	let currentYear = new Date().getFullYear();
 
@@ -105,6 +105,7 @@
 						<h4>
 							Documentation for the REST API to request data about a company or person.
 						</h4>
+						<Link href="/rest-api">View docs</Link>
 					</Tile>
 				</Column>
 				<Column md sm={breakpoints.sm}>
@@ -112,16 +113,18 @@
 					><h2 class="tile--title">Streaming API</h2>
 						<h4>
 							HTTP streaming API for live events such as company filings.
-						</h4></Tile
-					>
+						</h4>
+						<Link href="/streams">View docs</Link>
+					</Tile>
 				</Column>
 				<Column md sm={breakpoints.sm}>
 					<Tile class="sp--tile"
 					><h2 class="tile--title">Bulk Data Files</h2>
 						<h4>
 							Bulk data files allow you to start your own database of companies house data.
-						</h4></Tile
-					>
+						</h4>
+						<Link href="/bulk-data">View docs</Link>
+					</Tile>
 				</Column>
 			</Row>
 			<Row class="sp--arrow--down">
@@ -186,7 +189,7 @@
 	</Grid>
 	<footer>
 		<span class="pd"></span> 2021{currentYear === 2021 ? '' : ' - ' + currentYear} -
-		<a class="sp--link" href="https://geopjr.dev/">Brian Evans</a>
+		<a class="sp--link" href="https://brianevans.tech/">Brian Evans</a>
 	</footer>
 </div>
 
