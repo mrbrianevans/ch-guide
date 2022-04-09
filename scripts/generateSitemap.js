@@ -17,7 +17,7 @@ export async function generateSitemap() {
   const indexModTime = await stat("src/routes/index.svelte").then(s => s.mtime);
   const sitemap = {
     urlset: [
-      // {_attr:{'xsi:schemaLocation':'http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'}},
+      { _attr: { "xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9" } },
       { url: [{ loc: baseUrl }, { lastmod: indexModTime.toISOString() }] },
       ...pages
     ]
