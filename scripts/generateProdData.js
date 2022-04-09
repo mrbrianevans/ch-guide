@@ -1,5 +1,6 @@
-import createPressData from '../src/lib/SveltePress/functions/dataGenerator.js';
-import createSidebar from '../src/lib/SveltePress/functions/sidebarGenerator.js';
+import createPressData from "../src/lib/SveltePress/functions/dataGenerator.js";
+import createSidebar from "../src/lib/SveltePress/functions/sidebarGenerator.js";
+import { generateSitemap } from "./generateSitemap.js";
 
 // This function generated the following databases
 // - Index
@@ -10,7 +11,9 @@ import createSidebar from '../src/lib/SveltePress/functions/sidebarGenerator.js'
 // and before every prod build
 // package.json has been modified to do so.
 
-createPressData('./pages/', true, true);
-console.log('\x1b[33m%s\x1b[0m', '[SveltePress]: Generated pressData');
+createPressData("./pages/", true, true);
+console.log("\x1b[33m%s\x1b[0m", "[SveltePress]: Generated pressData");
 createSidebar(true);
-console.log('\x1b[33m%s\x1b[0m', '[SveltePress]: Generated sidebar');
+console.log("\x1b[33m%s\x1b[0m", "[SveltePress]: Generated sidebar");
+await generateSitemap();
+console.log("\x1b[33m%s\x1b[0m", "[SveltePress]: Generated sitemap");

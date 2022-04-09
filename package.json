@@ -9,7 +9,8 @@
     "postinstall": "ni svelte -D --ignore-scripts && node scripts/generateSymlinks.js",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "preinstall": "node scripts/prepareTheme.js"
+    "preinstall": "node scripts/prepareTheme.js",
+    "sitemap": "node scripts/generateSitemap.js"
   },
   "dependencies": {
     "@antfu/ni": "0.14.0",
@@ -36,7 +37,8 @@
     "sanitize-html": "2.7.0",
     "sass": "1.49.11",
     "svelte-preprocess": "4.10.5",
-    "svelte-typewriter": "2.4.5"
+    "svelte-typewriter": "2.4.5",
+    "xml": "^1.0.1"
   },
   "type": "module",
   "license": "Unlicense",
