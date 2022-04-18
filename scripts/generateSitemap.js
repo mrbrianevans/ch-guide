@@ -1,24 +1,27 @@
 import xml from "xml";
 import { readdir, stat, writeFile } from "fs/promises";
+import fs from 'fs'
 import path from "path";
+import {log} from 'isomorphic-git'
 
+const gitdir = path.resolve('.git')
 /**
  * Generates an XML sitemap in the static folder for bot crawlers like Google.
  */
 export async function generateSitemap() {
   const pageFiles = await getPages("pages");
   const baseUrl = "https://chguide.co.uk/";
-  const pages = await Promise.all(pageFiles.map(f => stat(f).then(s => ({
+  const pages = await Promise.all(pageFiles.map(f => getModDate(f).then(lastmod => ({
     url: [
       { loc: baseUrl + path.relative("pages", f).slice(0, -3).replaceAll("\\", "/") },
-      { lastmod: s.mtime.toISOString() }
+      { lastmod }
     ]
   }))));
-  const indexModTime = await stat("src/routes/index.svelte").then(s => s.mtime);
+  const indexModTime = await getModDate("src/routes/index.svelte")
   const sitemap = {
     urlset: [
       { _attr: { "xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9" } },
-      { url: [{ loc: baseUrl }, { lastmod: indexModTime.toISOString() }] },
+      { url: [{ loc: baseUrl }, { lastmod: indexModTime }] },
       ...pages
     ]
   };
@@ -41,3 +44,13 @@ async function getPages(directory) {
 }
 
 await generateSitemap();
+
+async function getModDate(filepath){
+  const relPath = path.relative('.',filepath).replaceAll('\\','/')
+  const history = await log({filepath:relPath, depth:1, gitdir ,fs, force:true})
+  // console.log(relPath, 'last committed',new Date(history[0].commit.committer.timestamp*1000), 'in',history[0].commit.message.substring(0,history[0].commit.message.indexOf('\n')))
+  return new Date(history[0].commit.committer.timestamp*1000).toISOString()
+  // following this is a worse implementation that does not use git
+  const s = await stat(filepath)
+  return s.mtime.toISOString()
+}

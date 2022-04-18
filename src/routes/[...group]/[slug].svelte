@@ -99,5 +99,6 @@
       {post.meta.description}
     </Tile>
   {/if}
+  <!--todo: add a button to report a mistake on the page and to edit it on GitHub -->
   {@html post.body}
 </Content>
