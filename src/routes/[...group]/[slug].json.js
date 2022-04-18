@@ -1,5 +1,11 @@
 import { md2html } from "$lib/SveltePress/markdown/MD2HTML";
 import { getData } from "$lib/SveltePress/SveltePressData";
+import path from "path";
+import { log } from "isomorphic-git";
+import fs from "fs";
+
+const gitdir = path.resolve('.git')
+
 
 // Gets current folder from spData used to get the file
 function getFolder(folderStructure) {
@@ -84,6 +90,12 @@ export async function post({ params, request }) {
   // Same for groupName
   if (!Object.prototype.hasOwnProperty.call(content.meta, "groupName") && file) {
     content.meta.groupName = folder.get("name"); // this is undefined right now
+  }
+  // Same for gitCommit
+  if (!Object.prototype.hasOwnProperty.call(content.meta, "gitCommit") && file) {
+    const relPath = path.relative('.',path.resolve(`pages/${post}.md`)).replaceAll('\\','/')
+    const history = await log({filepath:relPath, depth:1, gitdir , fs, force:true})
+    content.meta.gitCommit = history[0]
   }
 
   const pagination = getPagination(folder, slug);
