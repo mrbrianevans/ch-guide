@@ -79,7 +79,7 @@
 
 <Content meta={post.meta} pagination={post.pagination}>
   <p>
-    Last edited by {post.meta.gitCommit.commit.author.name} on {Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(new Date(post.meta.gitCommit.commit.author?.timestamp*1000))}
+    Last updated on {Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(new Date(post.meta.gitCommit.commit.author?.timestamp*1000))} by {post.meta.gitCommit.commit.author.name}.
     {#if post.meta.tags}
       {#each post.meta.tags as tag}
         <Tag>{tag}</Tag>
