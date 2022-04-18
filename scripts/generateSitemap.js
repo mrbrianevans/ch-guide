@@ -48,8 +48,9 @@ await generateSitemap();
 async function getModDate(filepath){
   const relPath = path.relative('.',filepath).replaceAll('\\','/')
   const history = await log({filepath:relPath, depth:1, gitdir ,fs, force:true})
-  // console.log(relPath, 'last committed',new Date(history[0].commit.committer.timestamp*1000), 'in',history[0].commit.message.substring(0,history[0].commit.message.indexOf('\n')))
-  return new Date(history[0].commit.committer.timestamp*1000).toISOString()
+  const { commit } = history[0]
+  // console.log(relPath, 'last committed',new Date(commit.author.timestamp*1000), 'in', commit.message.substring(0,commit.message.indexOf('\n')))
+  return new Date(commit.author.timestamp*1000).toISOString()
   // following this is a worse implementation that does not use git
   const s = await stat(filepath)
   return s.mtime.toISOString()
