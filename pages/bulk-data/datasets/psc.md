@@ -1,5 +1,12 @@
 ---
 postName: Persons with Significant Control
+tags:
+  - persons with significant control
+  - bulk data file
+  - company ownership information
+title: Persons with Significant Control (PSC) bulk data from Companies House
+description: A guide to using the persons with signficant control bulk data JSON file from Companies House.
+status: complete
 ---
 
 # Bulk PSC data

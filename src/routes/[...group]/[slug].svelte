@@ -53,12 +53,17 @@
   import Content from "$lib/SveltePress/components/content.svelte";
   import Config from "$lib/SveltePress/sveltePress.config";
   import {
+    InlineNotification,
+    // Link,
     // Breadcrumb, BreadcrumbItem,
     Tag, Tile
   } from "carbon-components-svelte";
+  import { generateLd } from "$lib/generateStructuredData.js";
 
-  export let post, params;
+  export let post;
+  // export let params;
 </script>
+
 
 <svelte:head>
   <meta content="CH Guide" property="og:site_name" />
@@ -80,6 +85,7 @@
 <Content meta={post.meta} pagination={post.pagination}>
   <p>
     Last updated on {Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(new Date(post.meta.gitCommit.commit.author?.timestamp*1000))} by {post.meta.gitCommit.commit.author.name}.
+    <br/>
     {#if post.meta.tags}
       {#each post.meta.tags as tag}
         <Tag>{tag}</Tag>
@@ -95,9 +101,18 @@
       <!--				<BreadcrumbItem href="/{params.group}/{params.slug}">{post.meta.postName}</BreadcrumbItem>-->
       <!--			</Breadcrumb>-->
       <h1>{post.meta.postName}</h1>
+      <h5><em>Summary</em></h5>
       {post.meta.description}
     </Tile>
   {/if}
   <!--todo: add a button to report a mistake on the page and to edit it on GitHub -->
+  {#if post.meta.status !== 'complete'}
+    <InlineNotification
+
+      kind="warning"
+      subtitle="This page isn't finished being written yet. To contribute, see the GitHub repository."
+      title="Incomplete:" />
+  {/if}
+  {@html generateLd(post.meta)}
   {@html post.body}
 </Content>

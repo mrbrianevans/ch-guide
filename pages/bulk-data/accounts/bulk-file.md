@@ -1,5 +1,12 @@
 ---
 postName: Bulk Accounts
+tags:
+- financials
+- accounts
+- bulk
+- ixbrl
+description: A guide to using the company financial accounts bulk data iXBRL files from Companies House.
+status: incomplete
 ---
 
 # Accounts available in bulk downloads

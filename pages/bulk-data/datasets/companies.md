@@ -1,5 +1,10 @@
 ---
 postName: Companies
+tags:
+  - companies
+title: Companies bulk data from Companies House
+description: A guide to using the companies bulk data CSV file from Companies House.
+status: complete
 ---
 
 # Companies basic data
