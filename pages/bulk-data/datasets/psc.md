@@ -81,8 +81,30 @@ The data can be downloaded as multiple 60Mb chunks, or as a single file.
 
 The single file download is a `.zip` file containing a single `.json` file.
 
-The `.zip` file is approximately one gigabyte, and the `.json` file is about 6GB when unzipped. 
+The `.zip` file is approximately one gigabyte, and the `.json` file is about 6GB when unzipped.
 
 Contained in the JSON file are about 10 million lines of persons details.
 
 These sizes were accurate in 2021, but may change over time.
+
+## Split files
+There are segmented chunks as an alternative to the big file.
+Each chunk contains 500,000 records and is about 65mb zipped and 370mb unzipped.
+The file names are formatted slightly differently to the big file:
+```
+http://download.companieshouse.gov.uk/psc-snapshot-YYYY-MM-DD_{I}of{T}.zip
+```
+
+The last chunk is smaller than the others.
+The last line of the last chunk contains a summary of the data, such as this (prettified):
+```json
+{
+  "data": {
+    "kind": "totals#persons-of-significant-control-snapshot",
+    "persons_of_significant_control_count": 9792999,
+    "statements_count": 627924,
+    "exemptions_count": 60,
+    "generated_at": "2022-06-28T03:40:50+01:00"
+  }
+}
+```
