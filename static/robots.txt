@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://chguide.co.uk/sitemap.xml

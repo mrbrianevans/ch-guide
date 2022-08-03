@@ -1,4 +1,0 @@
-{
-	"installDependencies": false,
-	"startCommand": "npm run preinstall && npm install --ignore-scripts && node scripts/generateSymlinks.js && npm run dev"
-}
