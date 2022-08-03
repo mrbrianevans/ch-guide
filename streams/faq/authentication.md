@@ -34,7 +34,7 @@ If the key is incorrect, you will get a 401 Unauthorised response code with this
 401 Unauthorized
 ```
 ```json
-{ error: 'Invalid Authorization', type: 'ch:service' }
+{ "error": "Invalid Authorization", "type": "ch:service" }
 ```
 
 # Limitations
