@@ -1,0 +1,15 @@
+{
+  "name": "ch-guide",
+  "version": "1.0.0",
+  "author": "Brian Evans",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  }
+}

@@ -1,3 +1,0 @@
----
-groupName: Bulk data
----

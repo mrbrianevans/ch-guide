@@ -1,3 +1,0 @@
----
-groupName: Document API
----
