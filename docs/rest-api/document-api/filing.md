@@ -1,13 +1,10 @@
----
-postName: Filings
----
-
-### Introduction
+# Filings Document API
+## Introduction
 
 Companies House provides an API to retrieve documents such as accounts or other types of filings. They are referenced by
 the filings transaction/resource id and the company number.
 
-### How to use
+## How to use
 
 Basic authentication is required for all of these endpoints.
 
