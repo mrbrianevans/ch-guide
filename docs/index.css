@@ -1,7 +1,0 @@
-
-#custom{
-    visibility: hidden; /* until its been properly designed */
-    display: grid;
-    gap: 0.25rem;
-    grid-template-columns: repeat(3, 1fr);
-}
