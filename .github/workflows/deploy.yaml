@@ -2,7 +2,8 @@ name: Deploy site to Pages
 
 on:
   push:
-    branches: [$default-branch]
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
