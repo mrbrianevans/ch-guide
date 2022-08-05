@@ -1,6 +1,7 @@
 ---
 layout: home
-    
+title: CH Guide 
+description: Unofficial Companies House developer guide
 hero:
     name: CH Guide
     text: Unofficial Companies House developer guide

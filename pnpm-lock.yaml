@@ -3,10 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   vitepress: 1.0.0-alpha.4
   vue: ^3.2.37
+  xml: ^1.0.1
 
 devDependencies:
   vitepress: 1.0.0-alpha.4
   vue: 3.2.37
+  xml: 1.0.1
 
 packages:
 
@@ -757,4 +759,8 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
+    dev: true
+
+  /xml/1.0.1:
+    resolution: {integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==}
     dev: true

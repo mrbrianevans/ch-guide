@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "sitemap": "node generateSitemap.mjs"
   },
   "devDependencies": {
     "vitepress": "1.0.0-alpha.4",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "xml": "^1.0.1"
   }
 }
