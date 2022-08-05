@@ -10,8 +10,12 @@
     "sitemap": "node generateSitemap.mjs"
   },
   "devDependencies": {
+    "sass": "^1.54.3",
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37",
     "xml": "^1.0.1"
+  },
+  "dependencies": {
+    "camelcase": "^7.0.0"
   }
 }

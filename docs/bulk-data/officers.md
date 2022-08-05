@@ -39,6 +39,15 @@ separator.
 Details of the header, trailer, person and company records can be found in the data specification provided by Companies House,
 and may be added here in future for ease of access.
 
+## Parsing tester
+<script setup>
+import OfficersRecordExplainer from '../../components/OfficersRecordExplainer.vue'
+</script>
+
+Try parsing a record from the bulk file. Paste one below to see the values.
+<OfficersRecordExplainer/>
+At the moment the parser can only handle person records.
+
 ## Size
 
 This information is based on the April 2021 snapshot:
