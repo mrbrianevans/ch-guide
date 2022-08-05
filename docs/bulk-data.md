@@ -1,4 +1,8 @@
-# Bulk data
+---
+description: Companies House offers some bulk data download products to populate a database with companies, persons with significant control, officers and accounts data.
+---
+
+# Bulk Data products from Companies House
 
 Companies House offers various bulk data products. 
 Some of them are detailed on https://www.gov.uk/guidance/companies-house-data-products.
