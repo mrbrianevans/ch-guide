@@ -1,5 +1,7 @@
 <script>
-import { parseOfficerPersonRecord } from "./officerRecordParser.mjs";
+import {
+  parseRecord
+} from "./recordTypes.ts";
 
 export default {
   data() {
@@ -11,10 +13,10 @@ export default {
   },
   computed: {
     parsedRecord(){
-      return parseOfficerPersonRecord(this.record)
+      return parseRecord(this.record)
     },
     show(){
-      return Boolean(this.parsedRecord)
+      return this.record.length > 0
     }
   }
 }
@@ -30,6 +32,8 @@ export default {
   width: 100%;
   background: #0001;
   border: 2px solid #0006;
+  font-family: var(--vp-font-family-mono);
+  font-size: 16px;
 }
 
 pre.explain-object{

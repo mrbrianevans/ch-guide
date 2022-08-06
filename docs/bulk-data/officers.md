@@ -15,7 +15,7 @@ fixed width fields and `<` deliminated values.
 The official product code for the officer appointments data snapshot is Product 195, 
 and the corresponding update files are Product 198.
 
-## Format
+## Data format
 
 The data comes in about 9 files, named like this:
 ```
@@ -27,26 +27,22 @@ The files are plain text and records are seperated with the newline `\n` charact
 Each file has a header (first line of file) and trailer (last line of file) record. In between the header and trailer records,
 there are both person and company records.
 
-A sample record looks like this:
-
-```
-FC0296792300152256080001        20100625                                0076<MARK<CARTER<<<<UNIT D AIRPORT BUSINESS PARK<SWORDS ROAD<DUBLIN<<IRELAND<<<<
-```
 
 The fixed length fields come first, with no separator between them. The variable length fields come last with a `<`
 separator.
 
 Details of the header, trailer, person and company records can be found in the data specification provided by Companies House,
-and may be added here in future for ease of access.
+and have been summarised [below](#record-types).
 
 ## Parsing tester
 <script setup>
 import OfficersRecordExplainer from '../../components/OfficersRecordExplainer.vue'
 </script>
 
-Try parsing a record from the bulk file. Paste one below to see the values.
+Try parsing a record from the bulk file. Paste one below to see the values extracted.
 <OfficersRecordExplainer/>
-At the moment the parser can only handle person records.
+
+[Full screen parser](./officersParser.md)
 
 ## Size
 
@@ -65,8 +61,12 @@ There are 4 types of record found in the data files:
 - company record
 - trailer record
 
-The tail record can be used to validate the correct number of rows were read. The header record says what date the data
-was captured. Company records only provide company name, status and the number of officers.
+The header record says what date the data was captured.
+Person records have details about the officers of a company, such as name, date of birth and appointment date.
+Company records only provide company name, status and the number of officers.
+The trailer record can be used to validate the correct number of rows were read.
+
+More details about each of the record types can be found in [officers/record types](./officers/recordTypes.md).
 
 ## Officers update file
 

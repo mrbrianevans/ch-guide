@@ -68,3 +68,45 @@ export function parseOfficerPersonRecord(officerRecord){
   }
 }
 
+/*
+Person record: -----------------------------------------------
+Character Position	Data Category	Length	Data Item
+1	X	8	Company Number
+9	9	1	Record Type
+10	X	1	App Date Origin
+11	9	2	Appointment Type
+13	9	12	Person Number
+25	X	1	Corporate indicator
+26	X	7	Filler
+33	X	8	Appointment Date
+41	X	8	Resignation Date
+49	X	8	Person Postcode
+57	X	8	Partial Date of Birth
+65	X	8	Full Date of Birth
+73	9	4	Variable Data Length
+77	X	1125 (max)	Variable Data (Name/ Address/ Occupation Nationality/Usual Residential Country )
+-------------------------------------------------------------
+
+Company record: ---------------------------------------------
+Character Position	Data Category	Length	Data Item
+1	X	8	Company Number
+9	9	1	Record Type
+10	X	1	Company Status
+11	X	22	Filler
+33	9	4	Number of Officers
+37	9	4	Company Name Length
+41	X	161	Company Name (Delimited by “<”)
+-------------------------------------------------------------
+
+Header record: ---------------------------------------------
+1	X	8	Header Identifier
+9	9	4	Run Number
+13	9	8	Production Date
+-------------------------------------------------------------
+
+Trailer record: ---------------------------------------------
+1	X	8	Trailer Identifier
+9	9	8	Record Count
+-------------------------------------------------------------
+
+ */
