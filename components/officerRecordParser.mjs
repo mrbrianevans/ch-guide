@@ -1,5 +1,11 @@
-import camelcase from "camelcase";
-
+// import camelcase from "camelcase";
+// can't get imports to work with commonjs/es module. Won't allow require(), import {}, or await import().
+function camelcase(str) {
+  return str.toLowerCase().replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index)
+  {
+    return index == 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+}
 
 const example = "FC0296792300152256080001        20100625                                0076<MARK<CARTER<<<<UNIT D AIRPORT BUSINESS PARK<SWORDS ROAD<DUBLIN<<IRELAND<<<<"
 

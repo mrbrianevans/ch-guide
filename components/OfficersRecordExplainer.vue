@@ -1,5 +1,6 @@
 <script>
-import {parseOfficerPersonRecord} from './officerRecordParser'
+import { parseOfficerPersonRecord } from "./officerRecordParser.mjs";
+
 export default {
   data() {
     return {
