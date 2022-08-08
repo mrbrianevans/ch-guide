@@ -1,6 +1,13 @@
 
-
+//todo: add data types for Date and Variable
 type RecordTypeFormat = {start: number, length: number, dataType: 'X'|'9', name: string}[]
+
+enum RecordTypes {
+  Header,
+  Company,
+  Person,
+  Trailer
+}
 
 export const PersonRecordFormat: RecordTypeFormat = [
   { start: 0, dataType: 'X', length: 8, name: 'Company Number' },
@@ -72,6 +79,15 @@ export function parseString(recordString: string, format: RecordTypeFormat){
   }))
 }
 
+function parseStringArray(recordString: string, format: RecordTypeFormat){
+  return format.map((segment, index) => {
+    const rawValue = recordString.slice(segment.start, segment.start + segment.length)
+    const transformer = segment.dataType === '9' ? parseInt : s=>s
+    const parsedValue = transformer(rawValue)
+    return {...segment, parsedValue, rawValue, index};
+  })
+}
+
 export function parseVariableData(keysFormat: string, valuesString: string){
   const keys = keysFormat.split('<').map(s=>(s)).filter(k=>k.length)
   const values = valuesString.split('<')
@@ -119,29 +135,72 @@ interface ParsedTrailerRecord {
   'Record Count': number;
 }
 
-export function parseRecord(record: string){
-  let format = PersonRecordFormat
-  let transformer = s => s
+function getRecordType(record: string){
+  // this could also be done with a regex
   if(record.length === 16){
-    format = TrailerRecordFormat
-    transformer = transformTrailerRecord
+    return RecordTypes.Trailer
   }else if(record.length === 20){
-    format = HeaderRecordFormat
-    transformer = transformHeaderRecord
+    return RecordTypes.Header
   }else{
     const recordType = record[8]
     if(recordType === '1') {
-      format = CompanyRecordFormat;
-      transformer = transformCompanyRecord
+      return RecordTypes.Company
     }
     else if(recordType === '2') {
-      format = PersonRecordFormat;
-      transformer = transformPersonRecord
+      return RecordTypes.Person
     }
   }
-  const rawExtractedValues = parseString(record, format)
+}
 
+function getRecordFormat(record: string){
+  let format = PersonRecordFormat
+  const recordType = getRecordType(record)
+  switch (recordType) {
+    case RecordTypes.Trailer:
+      format = TrailerRecordFormat
+      break;
+    case RecordTypes.Header:
+      format = HeaderRecordFormat
+      break;
+    case RecordTypes.Company:
+      format = CompanyRecordFormat;
+      break;
+    case RecordTypes.Person:
+      format = PersonRecordFormat;
+      break;
+  }
+  return format
+}
+function getRecordTransformer(record: string){
+  let transformer = s => s
+  const recordType = getRecordType(record)
+  switch (recordType) {
+    case RecordTypes.Trailer:
+      transformer = transformTrailerRecord
+      break;
+    case RecordTypes.Header:
+      transformer = transformHeaderRecord
+      break;
+    case RecordTypes.Company:
+      transformer = transformCompanyRecord
+      break;
+    case RecordTypes.Person:
+      transformer = transformPersonRecord
+      break;
+  }
+  return transformer
+}
+
+export function parseRecord(record: string){
+  const format = getRecordFormat(record)
+  const rawExtractedValues = parseString(record, format)
+  const transformer = getRecordTransformer(record)
   return transformer(rawExtractedValues)
+}
+
+export function segmentRecord(record: string){
+  const format = getRecordFormat(record)
+  return parseStringArray(record, format)
 }
 
 function transformPersonRecord(pr: ParsedPersonRecord){
