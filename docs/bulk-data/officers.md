@@ -39,7 +39,8 @@ and have been summarised [below](#record-types).
 import OfficersRecordExplainer from '../../components/OfficersRecordExplainer.vue'
 </script>
 
-Try parsing a record from the bulk file. Paste one below to see the values extracted.
+A small tool to test parsing records from the bulk file. Detects what type of record it is, and then parses each of the values.
+
 <OfficersRecordExplainer/>
 
 [Full screen parser](./officersParser.md)

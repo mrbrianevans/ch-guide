@@ -1,15 +1,14 @@
 <script>
 import {
-  parseRecord, segmentRecord
+  parseRecord, segmentRecord, dataTypeComments
 } from "./recordTypes.ts";
 
 export default {
   data() {
     return {
-      count: 0,
-      output: '',
       record: '',
-      segment: null
+      segment: null,
+      dataTypeComments
     }
   },
   computed: {
@@ -20,22 +19,40 @@ export default {
       return segmentRecord(this.record)
     },
     show(){
-      return this.record.length > 0
+      return this.record.length >= 16
     }
   }
 }
 </script>
 
 <template>
+  <div class="samples button-group">
+    <button @click="record = 'DDDDSNAP289820210421'">Sample header record</button>
+    <button @click="record = 'FC0294762301149774860001        20100316                197810          0127<MARCIN<NAKONOWSKI<<<<MOORE ST. MALL 58-66 PARNELL STREET<DUBLIN<DUBLIN<CO. DUBLIN<IRELAND<DIRECTOR<POLISH<REPUBLIC OF IRELAND<'">Sample person record</button>
+    <button @click="record = 'FC0296211C                      00020039VALENCE TECHNOLOGY CAYMAN ISLANDS INC.<'">Sample company record</button>
+    <button @click="record = '9999999900000048'">Sample trailer record</button>
+  </div>
   <input type="text" id="officers-record-explainer-input" v-model="record"/>
+  <div v-if="show">
+  <p>Hover over a segment to see it</p>
   <div class="record">
     <span v-for="seg in segmentedRecord" class="segment" @mouseover="segment = seg" @mouseleave="segment = null">{{seg.rawValue}}</span>
   </div>
   <div v-if="segment" class="explainer-tooltip" :class="[segment?('colour-'+(segment.index+1)):'']">
-    <b>{{segment.name}}</b>
-    {{segment.parsedValue}}
+    <p><b>{{segment.name}}</b> &nbsp;
+      <code class="raw">{{JSON.stringify(segment.rawValue)}}</code>
+    </p>
+    <p>Data type: {{dataTypeComments[segment.dataType]}}</p>
+    <p>{{segment.comment}}</p>
+    <div v-if="segment.rawValue !== String(segment.parsedValue) && String(segment.parsedValue).length > 0">
+      <p>Parsed value:
+        <code class="explain-object" v-if="typeof segment.parsedValue !== 'object'">{{JSON.stringify(segment.parsedValue, null, 2)}}</code></p>
+      <pre class="explain-object" v-if="typeof segment.parsedValue === 'object'">{{JSON.stringify(segment.parsedValue, null, 2)}}</pre>
+    </div>
   </div>
-  <pre class="explain-object" v-if="show">{{this.parsedRecord}}</pre>
+  <p>Fully parsed record:</p>
+  <pre class="explain-object">{{this.parsedRecord}}</pre>
+  </div>
 </template>
 
 <style lang="scss">
@@ -56,6 +73,7 @@ pre.explain-object{
 div.explainer-tooltip{
   padding: 0.25rem;
   border: 2px solid #0004;
+  transition: all 0.5s;
 }
 
 div.record{
@@ -63,9 +81,21 @@ div.record{
   font-size: 16px;
   white-space: pre-wrap;
   cursor: default;
-  line-height: 1.2;
+  line-height: 1.8;
 }
+div.record span.segment {
+  border: 5px solid transparent;
+}
+code{
+  display: inline-block;
 
+  font-family: var(--vp-font-family-mono);
+  font-size: 16px;
+  white-space: pre-wrap;
+}
+pre.parsed{
+  background: #0002;
+}
 $colours-list: #f3a683 #63cdda #cf6a87 #f7d794 #778beb #f8a5c2 #786fa6 #e77f67 #badc58 #ffbe76 #e056fd #1dd1a1 #54a0ff #ffda79;
 @each $clr in $colours-list {
   $i: index($colours-list, $clr);
@@ -79,4 +109,25 @@ $colours-list: #f3a683 #63cdda #cf6a87 #f7d794 #778beb #f8a5c2 #786fa6 #e77f67 #
     background-color: adjust-color($clr, $alpha: -0.5);
   }
 }
+
+.button-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0.25rem 0;
+}
+.button-group button{
+  border: 1px solid var(--vp-button-alt-border);
+  color: var(--vp-button-alt-text);
+  background-color: var(--vp-button-alt-bg);
+  border-radius: 4px;
+  padding: 0 20px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+}
+
 </style>

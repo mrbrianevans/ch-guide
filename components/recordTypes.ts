@@ -1,7 +1,10 @@
 
-//todo: add data types for Date and Variable
-type RecordTypeFormat = {start: number, length: number, dataType: 'X'|'9', name: string}[]
 
+type RecordTypeFormat = ({start: number, length: number, name: string, comment?: string}&({dataType: 'V', variableFormat: string}|{dataType: 'X'|'9'|'D'}))[]
+export const dataTypeComments: Record<RecordTypeFormat[number]['dataType'], string> = {
+  "9": "Number. Zero padded integer.", D: "Date in CCYYMMDD format. Spaces where date isn't available.", V: "Variable width data. This is in a CSV-like format where the deliminator is chevrons: '<'", X: "String"
+
+}
 enum RecordTypes {
   Header,
   Company,
@@ -9,28 +12,31 @@ enum RecordTypes {
   Trailer
 }
 
+const personRecordVariableDataFormat = 'TITLE<FORENAMES<SURNAME<HONOURS<CARE OF<PO BOX<ADDRESS LINE 1<ADDRESS LINE 2<POST TOWN<COUNTY<COUNTRY<OCCUPATION<NATIONALITY<USUAL RESIDENTIAL COUNTRY<'
+const companyRecordVariableDataFormat = 'COMPANY NAME<'
 export const PersonRecordFormat: RecordTypeFormat = [
   { start: 0, dataType: 'X', length: 8, name: 'Company Number' },
-  { start: 8, dataType: '9', length: 1, name: 'Record Type' },
+  { start: 8, dataType: '9', length: 1, name: 'Record Type', comment: 'Indicates that the record is describing a person rather than a company, and it is always a 2 for person records (whereas it\'s a 1 for company records).' },
   { start: 9, dataType: 'X', length: 1, name: 'App Date Origin' },
   { start: 10, dataType: '9', length: 2, name: 'Appointment Type' },
   { start: 12, dataType: '9', length: 12, name: 'Person Number' },
-  { start: 24, dataType: 'X', length: 1, name: 'Corporate indicator' },
+  { start: 24, dataType: 'X', length: 1, name: 'Corporate indicator', comment: 'This is a "Y" character when the officer is corporate, otherwise its a space.' },
   { start: 25, dataType: 'X', length: 7, name: 'Filler' },
-  { start: 32, dataType: 'X', length: 8, name: 'Appointment Date' },
-  { start: 40, dataType: 'X', length: 8, name: 'Resignation Date' },
+  { start: 32, dataType: 'D', length: 8, name: 'Appointment Date' },
+  { start: 40, dataType: 'D', length: 8, name: 'Resignation Date' },
   { start: 48, dataType: 'X', length: 8, name: 'Person Postcode' },
   {
     start: 56,
-    dataType: 'X',
+    dataType: 'D',
     length: 8,
     name: 'Partial Date of Birth'
   },
-  { start: 64, dataType: 'X', length: 8, name: 'Full Date of Birth' },
+  { start: 64, dataType: 'D', length: 8, name: 'Full Date of Birth' },
   { start: 72, dataType: '9', length: 4, name: 'Variable Data Length' },
   {
     start: 76,
-    dataType: 'X',
+    dataType: 'V',
+    variableFormat: personRecordVariableDataFormat,
     length: 1125,
     name: 'Variable Data (Name/ Address/ Occupation Nationality/Usual Residential Country )'
   }
@@ -38,14 +44,15 @@ export const PersonRecordFormat: RecordTypeFormat = [
 
 export const CompanyRecordFormat: RecordTypeFormat = [
   { start: 0, dataType: 'X', length: 8, name: 'Company Number' },
-  { start: 8, dataType: '9', length: 1, name: 'Record Type' },
+  { start: 8, dataType: '9', length: 1, name: 'Record Type', comment: 'Indicates that the record is describing a company rather than a person, and it is always a 1 for company records (whereas it\'s a 2 for person records).' },
   { start: 9, dataType: 'X', length: 1, name: 'Company Status' },
   { start: 10, dataType: 'X', length: 22, name: 'Filler' },
   { start: 32, dataType: '9', length: 4, name: 'Number of Officers' },
   { start: 36, dataType: '9', length: 4, name: 'Company Name Length' },
   {
     start: 40,
-    dataType: 'X',
+    dataType: 'V',
+    variableFormat: companyRecordVariableDataFormat,
     length: 161,
     name: 'Company Name (Delimited by "<")'
   }
@@ -53,15 +60,23 @@ export const CompanyRecordFormat: RecordTypeFormat = [
 
 
 export const HeaderRecordFormat: RecordTypeFormat = [
-  { start: 0, dataType: 'X', length: 8, name: 'Header Identifier' },
+  { start: 0, dataType: 'X', length: 8, name: 'Header Identifier', comment: 'Always "DDDDSNAP" for snapshots and "DDDDUPDT" for updates.' },
   { start: 8, dataType: '9', length: 4, name: 'Run Number' },
-  { start: 12, dataType: '9', length: 8, name: 'Production Date' }
+  { start: 12, dataType: 'D', length: 8, name: 'Production Date', comment: 'The date that the bulk file was produced.' }
 ]
 
 export const TrailerRecordFormat: RecordTypeFormat = [
   { start: 0, dataType: 'X', length: 8, name: 'Trailer Identifier' },
   { start: 8, dataType: '9', length: 8, name: 'Record Count' }
 ]
+type Transformers = { [T in RecordTypeFormat[number]['dataType']]: (segment: RecordTypeFormat[number]  )=>(v: string)=>any }
+const transformers: Transformers = {
+  "9": ()=>parseInt,
+  D: ()=>parseDate,
+// @ts-ignore
+  V: (segment)=>(v:string)=>parseVariableData(segment.variableFormat, v),
+  X: ()=>v=>v.trim()
+}
 
 /**
  * Splits a record line into the segments defined in the format.
@@ -82,8 +97,8 @@ export function parseString(recordString: string, format: RecordTypeFormat){
 function parseStringArray(recordString: string, format: RecordTypeFormat){
   return format.map((segment, index) => {
     const rawValue = recordString.slice(segment.start, segment.start + segment.length)
-    const transformer = segment.dataType === '9' ? parseInt : s=>s
-    const parsedValue = transformer(rawValue)
+    const transformer = transformers[segment.dataType]
+    const parsedValue = transformer(segment)(rawValue)
     return {...segment, parsedValue, rawValue, index};
   })
 }
@@ -94,6 +109,14 @@ export function parseVariableData(keysFormat: string, valuesString: string){
   return Object.fromEntries(keys.map((k,i)=>[k, values[i]]))
 }
 
+
+function parseDate(date){
+  return {
+    year: date.slice(0,4).trim(),
+    month: date.slice(4,6).trim(),
+    day: date.slice(6).trim()
+  }
+}
 
 interface ParsedPersonRecord {
   'Company Number': string;
@@ -204,7 +227,6 @@ export function segmentRecord(record: string){
 }
 
 function transformPersonRecord(pr: ParsedPersonRecord){
-  const personRecordVariableDataFormat = 'TITLE<FORENAMES<SURNAME<HONOURS<CARE OF<PO BOX<ADDRESS LINE 1<ADDRESS LINE 2<POST TOWN<COUNTY<COUNTRY<OCCUPATION<NATIONALITY<USUAL RESIDENTIAL COUNTRY<'
   const {'Variable Data (Name/ Address/ Occupation Nationality/Usual Residential Country )':variable, ...rest} = pr
   return {
     ...rest,
@@ -221,7 +243,6 @@ function transformTrailerRecord(tr: ParsedTrailerRecord){
 }
 
 function transformCompanyRecord(cr: ParsedCompanyRecord){
-  const companyRecordVariableDataFormat = 'COMPANY NAME<'
   const {"Company Name (Delimited by \"<\")":variable, ...rest} = cr
   return {
     ...rest,
