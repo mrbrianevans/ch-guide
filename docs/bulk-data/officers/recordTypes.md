@@ -3,7 +3,7 @@ description: Companies House provides a bulk file of companies and officers. The
 ---
 
 # Officer bulk data record types
-For more general information about the officers bulk file, see [officers bulk file](../officers.md).
+For more general information about the officers bulk file, see [officers bulk file](index.md).
 
 There are 4 types of record found in the officer bulk data files:
 

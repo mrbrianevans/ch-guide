@@ -19,7 +19,7 @@ const config = {
       }, {
         "text": "Persons with significant control", "link": "/bulk-data/psc"
       }, {
-        "text": "Officers", "link": "/bulk-data/officers"
+        "text": "Officers", "link": "/bulk-data/officers/"
       }, {
         "text": "Accounts", "link": "/bulk-data/accounts/bulk-file"
       }]
@@ -35,7 +35,7 @@ const config = {
       }, {
         "text": "Persons with significant control", "link": "/bulk-data/psc"
       }, {
-        "text": "Officers", "link": "/bulk-data/officers"
+        "text": "Officers", "link": "/bulk-data/officers/"
       }, {
         "text": "Accounts", "link": "/bulk-data/accounts/bulk-file"
       }]

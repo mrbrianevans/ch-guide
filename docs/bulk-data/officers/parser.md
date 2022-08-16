@@ -6,7 +6,7 @@ sidebar: false
 ---
 
 <script setup>
-import OfficersRecordExplainer from '../../components/OfficersRecordExplainer.vue'
+import OfficersRecordExplainer from '../../../components/OfficersRecordExplainer.vue'
 </script>
 
 
@@ -14,7 +14,7 @@ import OfficersRecordExplainer from '../../components/OfficersRecordExplainer.vu
 <div style="width: 95%;margin: auto;">
 
 
-[View officers bulk file documentation](./officers)
+[View officers bulk file documentation](index.md)
 
 <OfficersRecordExplainer/>
 </div>

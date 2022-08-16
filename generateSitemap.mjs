@@ -10,14 +10,13 @@ export async function generateSitemap() {
   const baseUrl = "https://chguide.co.uk/";
   const pages = await Promise.all(pageFiles.map(f => stat(f).then(s => ({
     url: [
-      { loc: baseUrl + path.relative("docs", f).slice(0, -3).replaceAll("\\", "/")+'.html' },
+      { loc: baseUrl + path.relative("docs", f).replace(/\.md$/, '.html').replaceAll("\\", "/").replace(/index\.html$/, '') },
       { lastmod: s.mtime.toISOString() }
     ]
   }))));
   const sitemap = {
     urlset: [
       { _attr: { "xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9" } },
-      { url: [{ loc: baseUrl }, { lastmod: pages.find(p=>p.url[0].loc===baseUrl+'index.html').url[1].lastmod }] },
       ...pages
     ]
   };

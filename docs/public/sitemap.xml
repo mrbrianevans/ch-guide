@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://chguide.co.uk/</loc>
-        <lastmod>2022-08-05T11:14:12.443Z</lastmod>
-    </url>
-    <url>
         <loc>https://chguide.co.uk/bulk-data/accounts/bulk-file.html</loc>
         <lastmod>2022-08-04T12:53:57.971Z</lastmod>
     </url>
@@ -21,16 +17,16 @@
         <lastmod>2022-08-04T12:53:57.973Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/bulk-data/officers/</loc>
+        <lastmod>2022-08-16T10:53:05.399Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/bulk-data/officers/parser.html</loc>
+        <lastmod>2022-08-16T10:55:36.640Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/bulk-data/officers/recordTypes.html</loc>
-        <lastmod>2022-08-10T18:18:36.750Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/bulk-data/officers.html</loc>
-        <lastmod>2022-08-08T13:46:56.046Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/bulk-data/officersParser.html</loc>
-        <lastmod>2022-08-08T13:34:55.352Z</lastmod>
+        <lastmod>2022-08-16T10:53:05.430Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/psc.html</loc>
@@ -38,10 +34,10 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data.html</loc>
-        <lastmod>2022-08-05T12:04:23.693Z</lastmod>
+        <lastmod>2022-08-16T11:03:47.476Z</lastmod>
     </url>
     <url>
-        <loc>https://chguide.co.uk/index.html</loc>
+        <loc>https://chguide.co.uk/</loc>
         <lastmod>2022-08-05T11:14:12.443Z</lastmod>
     </url>
     <url>

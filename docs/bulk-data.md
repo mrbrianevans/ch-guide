@@ -45,4 +45,4 @@ via the developer forum, as seen in this thread: https://forum.aws.chdev.org/t/c
 Once they have contacted you regarding the bulk file, you will be emailed a link to a cloud storage bucket to download the files,
 and they can also provide a data specification in Microsoft Word format, which is necessary for understanding the proprietary data format.
 
-For more details on the data file, see the page on [officers bulk data](/bulk-data/officers).
+For more details on the data file, see the page on [officers bulk data](/bulk-data/officers/).

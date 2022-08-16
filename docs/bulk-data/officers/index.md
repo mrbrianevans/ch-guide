@@ -36,14 +36,14 @@ and have been summarised [below](#record-types).
 
 ## Parsing tester
 <script setup>
-import OfficersRecordExplainer from '../../components/OfficersRecordExplainer.vue'
+import OfficersRecordExplainer from '../../../components/OfficersRecordExplainer.vue'
 </script>
 
 A small tool to test parsing records from the bulk file. Detects what type of record it is, and then parses each of the values.
 
 <OfficersRecordExplainer/>
 
-[Full screen parser](./officersParser.md)
+[Full screen parser](parser.md)
 
 ## Size
 
@@ -67,7 +67,7 @@ Person records have details about the officers of a company, such as name, date 
 Company records only provide company name, status and the number of officers.
 The trailer record can be used to validate the correct number of rows were read.
 
-More details about each of the record types can be found in [officers/record types](./officers/recordTypes.md).
+More details about each of the record types can be found in [officers/record types](recordTypes.md).
 
 ## Officers update file
 
