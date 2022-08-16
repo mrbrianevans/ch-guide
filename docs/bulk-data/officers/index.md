@@ -5,7 +5,7 @@ description: A guide to using the officers bulk data file from Companies House.
 # Officers bulk data from Companies House
 
 The officers bulk file is not publicly available, but can be requested by contacting Companies House. This can be done
-via the developer forum, as seen in this thread: https://forum.aws.chdev.org/t/can-we-bulk-download-officer-director-data/1225/194.
+via the developer forum, as seen in [this thread](https://forum.aws.chdev.org/t/can-we-bulk-download-officer-director-data/1225/194).
 
 They will send you a data specification and a link to download the files from a cloud storage bucket.
 
@@ -51,7 +51,8 @@ This information is based on the April 2021 snapshot:
 
 - size of ZIP download from Companies House storage bucket: 1.28GB
 - size of unzipped files: 6.58GB (split into 9 files)
-- number of officer appointments: 20,600,000
+- number of officer appointments: ~ 22.6 million
+- number of companies: ~ 13.7 million
 
 ## Record types
 
@@ -71,4 +72,5 @@ More details about each of the record types can be found in [officers/record typ
 
 ## Officers update file
 
-A FTP file transfer once a day to keep up to date the bulk officers file.
+A daily update file is produced which can be used to keep an appointments database up-to-date. 
+For more information on this file, see the [dedicated page](update-file/index.md).

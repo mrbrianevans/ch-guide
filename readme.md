@@ -8,3 +8,10 @@ If you spot any pages that need improvement or have an idea for a new page pleas
 or if you know what needs to be done, open a pull request.
 
 Documentation is in the `docs` directory.
+
+
+## Guidelines
+Every page should have a `description` set in the frontmatter. This description is used by search engines to work out 
+what the page is about.
+
+The sitemap should be regenerated with `pnpm sitemap` after any articles have been modified, before committing the changes to Git.

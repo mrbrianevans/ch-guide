@@ -18,7 +18,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/</loc>
-        <lastmod>2022-08-16T10:53:05.399Z</lastmod>
+        <lastmod>2022-08-16T13:56:44.091Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/parser.html</loc>
@@ -26,7 +26,15 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/recordTypes.html</loc>
-        <lastmod>2022-08-16T10:53:05.430Z</lastmod>
+        <lastmod>2022-08-16T13:53:16.453Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/bulk-data/officers/update-file/</loc>
+        <lastmod>2022-08-16T14:05:43.805Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/bulk-data/officers/update-file/personUpdateRecord.html</loc>
+        <lastmod>2022-08-16T14:05:43.846Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/psc.html</loc>
@@ -35,6 +43,10 @@
     <url>
         <loc>https://chguide.co.uk/bulk-data.html</loc>
         <lastmod>2022-08-16T11:03:47.476Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/general/company-number.html</loc>
+        <lastmod>2022-08-16T14:05:43.788Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/</loc>

@@ -78,20 +78,20 @@ company records (whereas it's a `2` for person records).
 
 The next character is a single character to represent the status of the company. It follows this mapping:
 
-  ```
-C=>Converted/closed company
-D=>Dissolved company
-L=>Company in liquidation
-R=>Company in receivership
- =>None of the above categories
-```
+| Value      | Status                       |
+|------------|------------------------------|
+| `C`        | Converted/closed company     |
+| `D`        | Dissolved company            |
+| `L`        | Company in liquidation       |
+| `R`        | Company in receivership      |
+| ` `(space) | None of the above categories |
+
 
 So in the example above, the company status is either converted or closed because the character is a `C`.
 
 The next 22 characters are just white space fillers (padding).
 
 The next 4 characters are an integer, which is the number of officers.
-[This is how many person records will follow the company record.]
 
 The next 4 characters are a zero-padded integer, which is the length of the company name which is to follow.
 In the above example, it's `0031` so the name is 31 characters long.
@@ -126,32 +126,33 @@ This table is the official documentation of the data specification provided by C
 
 **App date origin**: 
 This character can take one of six possible values, their meanings described in the table below:
-| Value | Description |
-|---|---|
-| 1 | Appointment date taken from appointment document (includes 288a, AP01, AP02, AP03, AP04, RR01**, NI form 296, SEAP01, and SEAP02) |
-| 2 | Appointment date taken from Annual Return (form 363) |
-| 3 | Appointment date taken from incorporation document (includes form 10, IN01, NI form 21, SEFM01, SEFM02, SEFM03, SEFM04, SEFM05, SECV01, and SETR02) |
-| 4 | Appointment date taken from LLP appointment document (includes LLP288a, LLAP01, LLAP02, and NI form LLP296a) |
-| 5 | Appointment date taken from LLP incorporation document (includes LLP2, and LLIN01) |
-| 6 | Appointment date taken from overseas company appointment document (includes BR4, OSAP01, OSAP02, OSAP03, and OSAP04) |
+
+| Value | Description                                                                                                                                         |
+|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1     | Appointment date taken from appointment document (includes 288a, AP01, AP02, AP03, AP04, RR01**, NI form 296, SEAP01, and SEAP02)                   |
+| 2     | Appointment date taken from Annual Return (form 363)                                                                                                |
+| 3     | Appointment date taken from incorporation document (includes form 10, IN01, NI form 21, SEFM01, SEFM02, SEFM03, SEFM04, SEFM05, SECV01, and SETR02) |
+| 4     | Appointment date taken from LLP appointment document (includes LLP288a, LLAP01, LLAP02, and NI form LLP296a)                                        |
+| 5     | Appointment date taken from LLP incorporation document (includes LLP2, and LLIN01)                                                                  |
+| 6     | Appointment date taken from overseas company appointment document (includes BR4, OSAP01, OSAP02, OSAP03, and OSAP04)                                |
 
 **	Appointment of secretary on re-registration from private company to PLC.
 
 **Appointment type**:
 Two digits which can take one of ten possible values, their meanings described in the table below:
 
-| Value | Description |
-|---|---|
-| 00 | Current Secretary |
-| 01 | Current Director |
-| 04 | Current non-designated LLP Member |
-| 05 | Current designated LLP Member |
-| 11 | Current Judicial Factor |
-| 12 | Current Receiver or Manager appointed under the Charities Act |
-| 13 | Current Manager appointed under the CAICE Act |
-| 17 | Current SE Member of Administrative Organ |
-| 18 | Current SE Member of Supervisory Organ |
-| 19 | Current SE Member of Management Organ |
+| Value | Description                                                   |
+|-------|---------------------------------------------------------------|
+| 00    | Current Secretary                                             |
+| 01    | Current Director                                              |
+| 04    | Current non-designated LLP Member                             |
+| 05    | Current designated LLP Member                                 |
+| 11    | Current Judicial Factor                                       |
+| 12    | Current Receiver or Manager appointed under the Charities Act |
+| 13    | Current Manager appointed under the CAICE Act                 |
+| 17    | Current SE Member of Administrative Organ                     |
+| 18    | Current SE Member of Supervisory Organ                        |
+| 19    | Current SE Member of Management Organ                         |
 
 **Person number**: A 12 digit unique numeric identifier for this person. The first 8 characters of the number identify the person, and the next 4 characters distinguish between different identifying details registed for the same person. The example below makes this more clear.
 
