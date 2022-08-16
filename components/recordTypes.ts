@@ -9,7 +9,8 @@ enum RecordTypes {
   Header,
   Company,
   Person,
-  Trailer
+  Trailer,
+  PersonUpdate
 }
 
 const personRecordVariableDataFormat = 'TITLE<FORENAMES<SURNAME<HONOURS<CARE OF<PO BOX<ADDRESS LINE 1<ADDRESS LINE 2<POST TOWN<COUNTY<COUNTRY<OCCUPATION<NATIONALITY<USUAL RESIDENTIAL COUNTRY<'
@@ -58,6 +59,47 @@ export const CompanyRecordFormat: RecordTypeFormat = [
   }
 ]
 
+const personUpdateRecordVariableDataFormat = 'New Title<New Forenames<New Surname<New Honours<Care Of<PO Box<New Address Line 1<New Address Line 2<New Post Town<New County<New Country<Occupation<New Nationality<New Residential Country<<<<<<<<<<<<<<';
+export const PersonUpdateRecordFormat: RecordTypeFormat =
+  [
+    { start: 0, dataType: 'X', length: 8, name: 'Company Number' },
+    { start: 8, dataType: '9', length: 1, name: 'Record Type' },
+    { start: 9, dataType: 'X', length: 1, name: 'App Date Origin' },
+    { start: 10, dataType: 'X', length: 1, name: 'Res Date Origin' },
+    { start: 11, dataType: 'X', length: 1, name: 'Correction indicator' },
+    { start: 12, dataType: 'X', length: 1, name: 'Corporate indicator' },
+    { start: 13, dataType: 'X', length: 2, name: 'Filler' },
+    { start: 15, dataType: '9', length: 2, name: 'Old Appointment Type' },
+    { start: 17, dataType: '9', length: 2, name: 'New Appointment Type' },
+    { start: 19, dataType: '9', length: 12, name: 'Old Person Number' },
+    { start: 31, dataType: '9', length: 12, name: 'New Person Number' },
+    {
+      start: 43,
+      dataType: 'D',
+      length: 8,
+      name: 'Partial Date of Birth'
+    },
+    { start: 51, dataType: 'D', length: 8, name: 'Full Date of Birth' },
+    { start: 59, dataType: 'X', length: 8, name: 'Old Person Postcode' },
+    { start: 67, dataType: 'X', length: 8, name: 'New Person Postcode' },
+    { start: 75, dataType: 'D', length: 8, name: 'Appointment Date' },
+    { start: 83, dataType: 'D', length: 8, name: 'Resignation Date' },
+    { start: 91, dataType: 'D', length: 8, name: 'Change Date' },
+    { start: 99, dataType: 'D', length: 8, name: 'Update Date' },
+    {
+      start: 107,
+      dataType: '9',
+      length: 4,
+      name: 'Variable Data Length'
+    },
+    {
+      start: 111,
+      dataType: 'V',
+      variableFormat: personUpdateRecordVariableDataFormat,
+      length: 1138,
+      name: 'Variable Data (variable length field)'
+    }
+  ]
 
 export const HeaderRecordFormat: RecordTypeFormat = [
   { start: 0, dataType: 'X', length: 8, name: 'Header Identifier', comment: 'Always "DDDDSNAP" for snapshots and "DDDDUPDT" for updates.' },
@@ -170,7 +212,10 @@ function getRecordType(record: string){
       return RecordTypes.Company
     }
     else if(recordType === '2') {
-      return RecordTypes.Person
+      if(record[11] === 'Y' || record[11] === ' ')
+        return RecordTypes.PersonUpdate
+      else
+        return RecordTypes.Person
     }
   }
 }
@@ -191,6 +236,9 @@ function getRecordFormat(record: string){
     case RecordTypes.Person:
       format = PersonRecordFormat;
       break;
+    case RecordTypes.PersonUpdate:
+      format = PersonUpdateRecordFormat;
+      break;
   }
   return format
 }
@@ -209,6 +257,9 @@ function getRecordTransformer(record: string){
       break;
     case RecordTypes.Person:
       transformer = transformPersonRecord
+      break;
+    case RecordTypes.PersonUpdate:
+      transformer = transformPersonUpdateRecord
       break;
   }
   return transformer
@@ -231,6 +282,13 @@ function transformPersonRecord(pr: ParsedPersonRecord){
   return {
     ...rest,
     ...parseVariableData(personRecordVariableDataFormat,variable)
+  }
+}
+function transformPersonUpdateRecord(pr){
+  const {'Variable Data (variable length field)':variable, ...rest} = pr
+  return {
+    ...rest,
+    ...parseVariableData(personUpdateRecordVariableDataFormat,variable)
   }
 }
 

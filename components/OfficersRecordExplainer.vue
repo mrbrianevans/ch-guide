@@ -96,7 +96,7 @@ code{
 pre.parsed{
   background: #0002;
 }
-$colours-list: #f3a683 #63cdda #cf6a87 #f7d794 #778beb #f8a5c2 #786fa6 #e77f67 #badc58 #ffbe76 #e056fd #1dd1a1 #54a0ff #ffda79;
+$colours-list: #f3a683 #63cdda #cf6a87 #f7d794 #778beb #f8a5c2 #786fa6 #e77f67 #badc58 #ffbe76 #e056fd #1dd1a1 #54a0ff #ffda79 #e6194B #3cb44b #ffe119 #4363d8 #f58231 #911eb4 #42d4f4 #f032e6 #bfef45 #fabed4 #469990 #dcbeff #9A6324 #fffac8 #800000 #aaffc3 #808000 #ffd8b1 #000075 #a9a9a9;
 @each $clr in $colours-list {
   $i: index($colours-list, $clr);
   div.record span.segment:nth-child(#{$i}) {
