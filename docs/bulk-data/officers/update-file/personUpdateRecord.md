@@ -61,10 +61,10 @@ This single character can take one of six possible values, their meanings descri
 The source document of the resignation date. Same mapping as described above in [app date origin](#app-date-origin).
 
 ### Correction indicator
-The correction indicator can be either a space ` ` or a `Y`. If it's set to `Y`, this indicates that the record is a correction.
+The correction indicator can be either a space `" "` or a `"Y"`. If it's set to `Y`, this indicates that the record is a correction.
 
 ### Corporate indicator
-Corporate indicator can be either a space ` ` or a `Y`. If it's set to `Y`, this indicates that the officer is a corporate body.
+Corporate indicator can be either a space `" "` or a `"Y"`. If it's set to `Y`, this indicates that the officer is a corporate body.
 
 ### Filler
 Filler whitespace.
