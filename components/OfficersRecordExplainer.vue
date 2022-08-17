@@ -31,6 +31,7 @@ export default {
     <button @click="record = 'FC0294762301149774860001        20100316                197810          0127<MARCIN<NAKONOWSKI<<<<MOORE ST. MALL 58-66 PARNELL STREET<DUBLIN<DUBLIN<CO. DUBLIN<IRELAND<DIRECTOR<POLISH<REPUBLIC OF IRELAND<'">Sample person record</button>
     <button @click="record = 'FC0296211C                      00020039VALENCE TECHNOLOGY CAYMAN ISLANDS INC.<'">Sample company record</button>
     <button @click="record = '9999999900000048'">Sample trailer record</button>
+    <button @click="record = '0495185421     0101216516300001216516300001196809                  W1J 7NJ 20161006                201610180108MR<DARRELL<BOYD<<<<105 PICCADILLY PICCADILLY<<LONDON<<ENGLAND<PROJECT DIRECTOR<BRITISH<ENGLAND<<<<<<<<<<<<<<'">Sample person update record</button>
   </div>
   <input type="text" id="officers-record-explainer-input" v-model="record"/>
   <div v-if="show">
