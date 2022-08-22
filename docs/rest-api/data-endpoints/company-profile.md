@@ -1,116 +1,83 @@
 ---
-postName: Company Profile
+description: Companies House REST API endpoint for retrieving company profile information by company number, such as company name, date of creation, company type and status.
 ---
-Official
-documentation: https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference/company-profile/company-profile
+# Get company profile endpoint
+This is an unofficial supplement to the [official documentation](https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference/company-profile/company-profile).
 
-Endpoint: `https://api.company-information.service.gov.uk/company/{companyNumber}`
+This endpoint returns company profile details for a given company number. 
+
+## Url
+The endpoint URL format is: `https://api.company-information.service.gov.uk/company/{companyNumber}` where `{companyNumber}` is an 8 character [company number](/general/company-number.md). For example:
+
+```http
+GET /company/02578066 HTTP/1.1
+Host: https://api.company-information.service.gov.uk
+Accept: application/json
+```
 
 Returns:
 
 ```json
 {
+  "type": "ltd",
+  "registered_office_address": {
+    "address_line_2": "1st Floor Flat",
+    "locality": "London",
+    "country": "England",
+    "address_line_1": "14 Lawn Road",
+    "postal_code": "NW3 2XS"
+  },
+  "status": "active",
+  "last_full_members_list_date": "2016-01-30",
+  "has_been_liquidated": false,
+  "sic_codes": [
+    "98000"
+  ],
   "accounts": {
     "accounting_reference_date": {
-      "day": "integer",
-      "month": "integer"
+      "day": "31",
+      "month": "01"
+    },
+    "overdue": false,
+    "next_due": "2023-10-31",
+    "next_made_up_to": "2023-01-31",
+    "next_accounts": {
+      "overdue": false,
+      "period_end_on": "2023-01-31",
+      "due_on": "2023-10-31",
+      "period_start_on": "2022-02-01"
     },
     "last_accounts": {
-      "made_up_to": "date",
-      "type": {}
-    },
-    "next_due": "date",
-    "next_made_up_to": "date",
-    "overdue": "boolean"
-  },
-  "annual_return": {
-    "last_made_up_to": "date",
-    "next_due": "date",
-    "next_made_up_to": "date",
-    "overdue": "boolean"
-  },
-  "branch_company_details": {
-    "business_activity": "string",
-    "parent_company_name": "string",
-    "parent_company_number": "string"
-  },
-  "can_file": "boolean",
-  "company_name": "string",
-  "company_number": "string",
-  "company_status": "string",
-  "company_status_detail": "string",
-  "confirmation_statement": {
-    "last_made_up_to": "date",
-    "next_due": "date",
-    "next_made_up_to": "date",
-    "overdue": "boolean"
-  },
-  "date_of_cessation": "date",
-  "date_of_creation": "date",
-  "etag": "string",
-  "foreign_company_details": {
-    "accounting_requirement": {
-      "foreign_account_type": "string",
-      "terms_of_account_publication": "string"
-    },
-    "accounts": {
-      "account_period_from:": {
-        "day": "integer",
-        "month": "integer"
-      },
-      "account_period_to": {
-        "day": "integer",
-        "month": "integer"
-      },
-      "must_file_within": {
-        "months": "integer"
-      }
-    },
-    "business_activity": "string",
-    "company_type": "string",
-    "governed_by": "string",
-    "is_a_credit_finance_institution": "boolean",
-    "originating_registry": {
-      "country": "string",
-      "name": "string"
-    },
-    "registration_number": "string"
-  },
-  "has_been_liquidated": "boolean",
-  "has_charges": "boolean",
-  "has_insolvency_history": "boolean",
-  "is_community_interest_company": "boolean",
-  "jurisdiction": "string",
-  "last_full_members_list_date": "date",
-  "links": {
-    "persons_with_significant_control": "string",
-    "persons_with_significant_control_statements": "string",
-    "registers": "string",
-    "self": "string"
-  },
-  "previous_company_names": [
-    {
-      "ceased_on": "date",
-      "effective_from": "date",
-      "name": "string"
+      "period_end_on": "2022-01-31",
+      "period_start_on": "2021-02-01",
+      "made_up_to": "2022-01-31",
+      "type": "total-exemption-full"
     }
-  ],
-  "registered_office_address": {
-    "address_line_1": "string",
-    "address_line_2": "string",
-    "care_of": "string",
-    "country": "string",
-    "locality": "string",
-    "po_box": "string",
-    "postal_code": "string",
-    "premises": "string",
-    "region": "string"
   },
-  "registered_office_is_in_dispute": "boolean",
-  "sic_codes": [
-    "string"
-  ],
-  "type": "string",
-  "undeliverable_registered_office_address": "boolean"
+  "company_name": "14 LAWN ROAD LIMITED",
+  "date_of_creation": "1991-01-30",
+  "undeliverable_registered_office_address": false,
+  "company_number": "02578066",
+  "jurisdiction": "england-wales",
+  "etag": "ecbcc0a0c3c254ad6f7a1b6b28285dd7a2a6e2b7",
+  "company_status": "active",
+  "has_insolvency_history": false,
+  "has_charges": false,
+  "confirmation_statement": {
+    "next_due": "2023-02-13",
+    "overdue": false,
+    "last_made_up_to": "2022-01-30",
+    "next_made_up_to": "2023-01-30"
+  },
+  "links": {
+    "self": "/company/02578066",
+    "filing_history": "/company/02578066/filing-history",
+    "officers": "/company/02578066/officers",
+    "persons_with_significant_control_statements": "/company/02578066/persons-with-significant-control-statements"
+  },
+  "registered_office_is_in_dispute": false,
+  "has_super_secure_pscs": false,
+  "can_file": true
 }
 ```
+Responses contain enum constants for some fields (`company_status`,`jurisdiction`,`status`,`sic_codes`,`type`) which can be found here: https://github.com/companieshouse/api-enumerations/blob/master/constants.yml
