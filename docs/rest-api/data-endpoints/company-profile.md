@@ -9,7 +9,7 @@ This endpoint returns company profile details for a given company number.
 ## Url
 The endpoint URL format is: `https://api.company-information.service.gov.uk/company/{companyNumber}` where `{companyNumber}` is an 8 character [company number](/general/company-number.md). For example:
 
-```http
+```
 GET /company/02578066 HTTP/1.1
 Host: https://api.company-information.service.gov.uk
 Accept: application/json

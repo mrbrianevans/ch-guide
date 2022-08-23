@@ -7,6 +7,9 @@ const config = {
   "outDir": "../build",
   "lang": "en-GB",
   "lastUpdated": true,
+  markdown:{
+    theme: { dark:"dark-plus",light: 'light-plus' }
+  },
   "themeConfig": {
     "editLink": {
       "pattern": "https://github.com/mrbrianevans/ch-guide/edit/master/docs/:path",

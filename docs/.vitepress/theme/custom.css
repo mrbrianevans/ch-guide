@@ -5,4 +5,10 @@
     --vp-c-brand-lighter: #EE795CFF;
     --vp-c-brand-dark: #d2360d;
     --vp-c-brand-darker: #D2360DFF;
+    --vp-code-block-bg: #F2F2F2;
+}
+
+/* to use in dark theme */
+.dark{
+    --vp-code-block-bg: #2B2B2C;
 }
