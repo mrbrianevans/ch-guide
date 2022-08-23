@@ -40,3 +40,59 @@ Sometimes leading zeros are omitted, so `00644831` is sometimes referred to as `
 To normalise this shorthand, pad the start of a company number with zeros until its 8 characters long.
 
 As some company numbers contain alphabet letters, these should be upper case.
+
+## Prefix meanings
+
+The prefix indicates the company type and jurisdiction.
+
+| Prefix   | Company Type                                                        | Additional                                | Example  |
+|----------|---------------------------------------------------------------------|:------------------------------------------|----------|
+| 0-9      | England & Wales Company                                             |                                           |          |
+| AC       | Assurance Company for England & Wales                               |                                           | AC000001 |
+| ZC       | Unregistered Companies (S 1043 - Not Cos Act) for England & Wales   |                                           | ZC000011 |
+| FC       | Overseas Company                                                    |                                           | FC000011 |
+| GE       | European Economic Interest Grouping (EEIG) for England & Wales      |                                           | GE000001 |
+| LP       | Limited Partnership for England & Wales                             |                                           | LP001682 |
+| OC       | Limited Liability Partnership for England & Wales                   | Can contain `P` and end in 1 or 2 letters | OC300001 |
+| SE       | European Company (Societas Europaea) for England & Wales            |                                           | SE000008 |
+| SA       | Assurance Company for Scotland                                      |                                           | SA000038 |
+| SZ       | Unregistered Companies (S 1043 Not Cos Act) for Scotland            |                                           | SZ000001 |
+| SF       | Overseas Company regd in Scotland (pre 1/10/09)                     |                                           | SF000109 |
+| GS       | European Economic Interest Grouping (EEIG) for Scotland             |                                           | GS000001 |
+| SL       | Limited Partnership for Scotland                                    | suffix can be A                           | SL000001 |
+| SO       | Limited Liability Partnership for Scotland                          |                                           | SO300001 |
+| SC       | Scottish Company                                                    |                                           | SC000053 |
+| ES       | European Company (Societas Europaea) for Scotland                   |                                           |          |
+| NA       | Assurance Company for Northern Ireland                              |                                           |          |
+| NZ       | Unregistered Companies (S 1043 Not Cos Act) for Northern Ireland    |                                           |          |
+| NF       | Overseas Company regd in Northern Ireland (pre 1/10/09)             |                                           | NF000006 |
+| GN       | European Economic Interest Grouping (EEIG) for Northern Ireland     |                                           |          |
+| NL       | Limited Partnership for Northern Ireland                            |                                           | NL000010 |
+| NC       | Limited Liability Partnership for Northern Ireland                  |                                           | NC000001 |
+| R0       | Northern Ireland Company (pre partition)                            |                                           | R0000001 |
+| NI       | Northern Ireland Company (post partition)                           | suffix can be A                           | NI000016 |
+| EN       | European Company (Societas Europaea) for Northern Ireland           |                                           |          |
+| -------- | ------------------------------------------------------------------- | -----------                               |          |
+| RS       | Registered Society                                                  | suffix is 1 or 2 or 3 letters             |          |
+| SG       | Scottish Partnership                                                |                                           |          |
+| SI       | Investment Company with Variable Capital(Umbrella)                  |                                           |          |
+| FE       | Further Education and Sixth Form College Corps                      |                                           |          |
+
+Company numbers which Companies House does not hold details for:
+
+| Prefix   | Company Type                                                       |
+|----------|--------------------------------------------------------------------|
+| IP       | Industrial & Provident Company                                     |
+| SP       | Scottish Industrial/Provident Company                              |
+| IC       | ICVC (Investment Company with Variable Capital)                    |
+| SI       | Scottish ICVC (Investment Company with Variable Capital)           |
+| NP       | Northern Ireland Industrial/Provident Company or Credit Union      |
+| NV       | Northern Ireland ICVC (Investment Company with Variable Capital)   |
+| RC       | Royal Charter Companies (English/Wales)                            |
+| SR       | Scottish Royal Charter Companies                                   |
+| NR       | Northern Ireland Royal Charter Companies                           |
+| NO       | Northern Ireland Credit Union Industrial/Provident Society         |
+| -------- | ------------------------------------------------------------------ |
+| CE       | Charitable Incorporated Organisation                               |
+| CS       | Scottish Charitable Incorporated Organisation                      |
+| PC       | Protected Cell Company                                             |
