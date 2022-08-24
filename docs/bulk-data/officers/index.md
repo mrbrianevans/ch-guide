@@ -70,6 +70,14 @@ The trailer record can be used to validate the correct number of rows were read.
 
 More details about each of the record types can be found in [officers/record types](recordTypes.md).
 
+## Parsers
+Some open source parsers I found on GitHub (not tested or verified):
+ - [mattattui/chDirectorsParser](https://github.com/mattattui/chDirectorsParser) (PHP)
+ - [Global-Witness/uk-companies-house-parsers-public](https://github.com/Global-Witness/uk-companies-house-parsers-public) (Python)
+ - [garrettheaver/companieshouse](https://github.com/garrettheaver/companieshouse) (Java)
+ - [ft-interactive/companies-house-appointments-importer](https://github.com/ft-interactive/companies-house-appointments-importer) (TypeScript (NodeJS))
+
+
 ## Officers update file
 
 A daily update file is produced which can be used to keep an appointments database up-to-date. 
