@@ -63,24 +63,20 @@ available in. This is generally `application/pdf`, but for accounts can also be 
 To access the document, request the link given in metadata and put a header to specify the desired content type (
 eg `Accept: application/pdf`).
 
-A simple example in JavaScript using the deprecated request library:
+A simple example in JavaScript:
 
 ```javascript
-const requests = require('request')
+import { request } from 'https'
 
-const url = "https://document-api.companieshouse.gov.uk/document/DR2uueIff1_ydir2xBw6ilyEjTTbN-s2b64v1wpqGl0/content";
 const options = {
-  url,
-  headers: {
-    accept: 'application/xhtml+xml'
-  },
-  auth: {
-    user: process.env.APIUSER,
-    pass: ''
-  }
+  host: 'document-api.companieshouse.gov.uk', 
+  path: '/document/DR2uueIff1_ydir2xBw6ilyEjTTbN-s2b64v1wpqGl0/content', 
+  auth: process.env.APIUSER + ':', 
+  headers: {accept: 'application/xhtml+xml'}
 }
-requests(options, (error, response, body) => {
-  console.log('body:', body)
+request(options, (response) => {
+  console.log('Status code', response.statusCode, response.statusMessage)
+  response.pipe(process.stdout) // print out response
 })
 ```
 

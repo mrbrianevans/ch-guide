@@ -45,4 +45,9 @@ via the developer forum, as seen in this thread: https://forum.aws.chdev.org/t/c
 Once they have contacted you regarding the bulk file, you will be emailed a link to a cloud storage bucket to download the files,
 and they can also provide a data specification in Microsoft Word format, which is necessary for understanding the proprietary data format.
 
-For more details on the data file, see the page on [officers bulk data](/bulk-data/officers/).
+For more details on the data file, see the page on [officers bulk data](/bulk-data/officers/), and for details on the 
+daily update file see [officers bulk daily updates](officers/update-file/).
+
+## FTP products
+There are many products which are only available via FTP upon special request to Companies House customer care. 
+A list of these products can be found in [bulk products](bulk-products.md).
