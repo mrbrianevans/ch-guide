@@ -10,7 +10,7 @@ Please add any more that you are aware of (edit button at bottom of page).
 | Prod182 | related to prod100                                                                        |
 | Prod183 | related to prod101                                                                        |
 | Prod192 | Disqualified Directors                                                                    |
-| Prod195 | [Company officer appointments snapshot](./officers/)                                      |
+| Prod195 | [Company officer appointments snapshot](./officers/)   , only active officers             |
 | Prod197 | Liquidation Daily Updates                                                                 |
 | Prod198 | [Company officer appointment updates](./officers/update-file/)                            |
 | Prod201 | Mort Daily updates                                                                        |
@@ -21,7 +21,7 @@ Please add any more that you are aware of (edit button at bottom of page).
 | Prod213 | (daily, split by LLP/ALL, xml)                                                            |
 | Prod214 | COMPANY LAW OFFICIAL NOTIFICATIONS, SUPPLEMENT TO THE BELFAST GAZETTE (weekly, rep/dat)   |
 | Prod215 | (daily, rec ind and ext)                                                                  |
-| Prod216 | ([officers bulk snapshot](./officers/), only produced upon request)                       |
+| Prod216 | ([officers bulk snapshot](./officers/), includes resigned officers)                       |
 | Prod217 | [Company basic data](./companies.md) (monthly, zipped)                                    |
 | Prod223 | [Accounts Bulk Data Product](accounts/bulk-file.md)                                       |
 | Prod224 | [Accounts monthly data](accounts/bulk-file.md) (upon request)                             |

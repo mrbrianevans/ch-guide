@@ -5,16 +5,16 @@
         <lastmod>2022-08-04T12:53:57.971Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/bulk-data/accounts/</loc>
+        <lastmod>2022-08-29T19:24:44.857Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/bulk-data/accounts/ixbrl.html</loc>
         <lastmod>2022-08-04T12:53:57.972Z</lastmod>
     </url>
     <url>
-        <loc>https://chguide.co.uk/bulk-data/accounts.html</loc>
-        <lastmod>2022-08-04T12:53:57.970Z</lastmod>
-    </url>
-    <url>
         <loc>https://chguide.co.uk/bulk-data/bulk-products.html</loc>
-        <lastmod>2022-08-24T20:24:03.995Z</lastmod>
+        <lastmod>2022-09-01T09:45:59.916Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/companies.html</loc>
@@ -69,6 +69,10 @@
         <lastmod>2022-08-23T17:12:16.337Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/rest-api/data-endpoints/filing-history.html</loc>
+        <lastmod>2022-09-08T17:34:21.913Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/registered-office-address.html</loc>
         <lastmod>2022-08-04T12:53:57.979Z</lastmod>
     </url>
@@ -98,7 +102,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/</loc>
-        <lastmod>2022-08-25T08:46:58.257Z</lastmod>
+        <lastmod>2022-09-08T17:36:37.783Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/faq/authentication.html</loc>
