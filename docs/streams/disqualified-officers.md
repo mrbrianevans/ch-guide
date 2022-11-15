@@ -1,5 +1,14 @@
+---
+description: The disqualified officers stream provides events when an officer is disqualified. Events are rare on this stream.
+---
+
 # Disqualified officers stream
 
+This stream was introduced around August 2022.
+
+Events on this stream are very rare.
+
+Sample event:
 ```json
 {
   "resource_kind": "disqualified-officer-natural",
