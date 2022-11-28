@@ -82,3 +82,7 @@ Some open source parsers I found on GitHub (not tested or verified):
 
 A daily update file is produced which can be used to keep an appointments database up-to-date. 
 For more information on this file, see the [dedicated page](update-file/index.md).
+
+## Disqualifications
+A separate bulk file is produced which contains the current officer disqualifications. 
+See the dedicated page for this file at [disqualifications](./disqualifications.md).

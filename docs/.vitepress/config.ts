@@ -35,7 +35,7 @@ const config = {
     "editLink": {
       "pattern": "https://github.com/mrbrianevans/ch-guide/edit/master/docs/:path", "text": "Edit this page on GitHub"
     }, "nav": navigationTree, "sidebar": navigationTree, "footer": {
-      "message": "Made with ♥ by <a href='https://brianevans.tech' target='blank'>Brian Evans</a>"
+      "message": "Made with ♥ by <a href='https://brianevans.tech' target='blank'>Brian Evans</a>",copyright: 'Open source'
     }, "socialLinks": [{
       "icon": "github", "link": "https://github.com/mrbrianevans/ch-guide"
     }]

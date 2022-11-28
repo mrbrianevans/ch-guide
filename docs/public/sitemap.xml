@@ -14,7 +14,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/bulk-products.html</loc>
-        <lastmod>2022-09-01T09:45:59.916Z</lastmod>
+        <lastmod>2022-11-28T18:05:27.172Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/companies.html</loc>
@@ -25,8 +25,12 @@
         <lastmod>2022-08-25T09:25:34.250Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/bulk-data/officers/disqualifications.html</loc>
+        <lastmod>2022-11-28T18:58:36.760Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/bulk-data/officers/</loc>
-        <lastmod>2022-08-24T18:16:33.697Z</lastmod>
+        <lastmod>2022-11-28T19:30:18.852Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/parser.html</loc>
@@ -58,7 +62,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/</loc>
-        <lastmod>2022-08-25T09:19:27.295Z</lastmod>
+        <lastmod>2022-11-28T19:19:40.440Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/alphabetical-search.html</loc>
@@ -70,7 +74,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/filing-history.html</loc>
-        <lastmod>2022-09-08T17:34:21.913Z</lastmod>
+        <lastmod>2022-11-28T18:05:27.173Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/registered-office-address.html</loc>
@@ -105,6 +109,18 @@
         <lastmod>2022-09-08T17:36:37.783Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/streams/charges.html</loc>
+        <lastmod>2022-11-28T18:05:27.173Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/streams/companies.html</loc>
+        <lastmod>2022-11-28T18:05:27.174Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/streams/disqualified-officers.html</loc>
+        <lastmod>2022-11-28T18:05:27.175Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/streams/faq/authentication.html</loc>
         <lastmod>2022-08-04T12:53:57.984Z</lastmod>
     </url>
@@ -121,32 +137,8 @@
         <lastmod>2022-08-04T12:53:57.983Z</lastmod>
     </url>
     <url>
-        <loc>https://chguide.co.uk/streams/http-streams/charges.html</loc>
-        <lastmod>2022-08-04T12:53:57.986Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/http-streams/companies.html</loc>
-        <lastmod>2022-08-04T12:53:57.987Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/http-streams/disqualified-officers.html</loc>
-        <lastmod>2022-08-04T12:53:57.987Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/http-streams/filing.html</loc>
-        <lastmod>2022-08-04T12:53:57.988Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/http-streams/insolvency.html</loc>
-        <lastmod>2022-08-04T12:53:57.988Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/http-streams/officers.html</loc>
-        <lastmod>2022-08-04T12:53:57.989Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/http-streams/psc.html</loc>
-        <lastmod>2022-08-04T12:53:57.989Z</lastmod>
+        <loc>https://chguide.co.uk/streams/filings.html</loc>
+        <lastmod>2022-11-28T18:05:27.175Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/http-streams.html</loc>
@@ -154,6 +146,18 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/</loc>
-        <lastmod>2022-08-04T12:53:57.982Z</lastmod>
+        <lastmod>2022-11-28T18:05:27.176Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/streams/insolvency-cases.html</loc>
+        <lastmod>2022-11-28T18:05:27.177Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/streams/officers.html</loc>
+        <lastmod>2022-11-28T18:05:27.177Z</lastmod>
+    </url>
+    <url>
+        <loc>https://chguide.co.uk/streams/persons-with-significant-control.html</loc>
+        <lastmod>2022-11-28T18:05:27.178Z</lastmod>
     </url>
 </urlset>
