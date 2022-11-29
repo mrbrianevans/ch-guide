@@ -24,6 +24,10 @@ features:
     details: One place with documentation for many data products, compiled from various sources.
   - title: Common questions answered
     details: Good answers to the most commonly asked questions on the developer forum.
+head:
+  - - link
+    - rel: canonical
+      href: https://chguide.co.uk
 ---
 
 <div style="margin: 2rem auto 0;max-width: 1152px;">

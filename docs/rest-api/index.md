@@ -20,3 +20,6 @@ Link to [Official documentation](https://developer-specs.company-information.ser
 ## Document API
 In addition to standard REST endpoints which return JSON data, there is a document API which can be used to retrieve filed documents.
 See [document-api/filing](document-api/filing.md) for a guide on how to use it, and the [official reference documentation](https://developer-specs.company-information.service.gov.uk/document-api/reference).
+
+## FAQs
+ - [authentication](./faq/authentication.md)
