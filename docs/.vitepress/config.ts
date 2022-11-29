@@ -1,3 +1,4 @@
+import type {UserConfig} from "vitepress";
 // used for sidebar and navbar. Should contain links to main sections, but not every page.
 const navigationTree = [
   {
@@ -22,7 +23,7 @@ const navigationTree = [
 /**
  * @type {import("vitepress").UserConfig}
  */
-const config = {
+const config: UserConfig = {
   "title": "CH Guide",
   "description": "Unofficial Companies House developer guide",
   "outDir": "../build",
@@ -39,7 +40,15 @@ const config = {
     }, "socialLinks": [{
       "icon": "github", "link": "https://github.com/mrbrianevans/ch-guide"
     }]
+  },
+  cleanUrls: 'without-subfolders',
+  transformHead(ctx){
+    // can be used to add a head tag to every page pointing to a canonical URL for google crawl bots
+    return [
+      // ['link', {rel:'canonical', href:'https://chguide.co.uk/'+ctx.pageData.relativePath.replace(/\.md$/, '')}]
+    ]
   }
 };
 
 export default config;
+

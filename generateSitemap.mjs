@@ -10,7 +10,7 @@ export async function generateSitemap() {
   const baseUrl = "https://chguide.co.uk/";
   const pages = await Promise.all(pageFiles.map(f => stat(f).then(s => ({
     url: [
-      { loc: baseUrl + path.relative("docs", f).replace(/\.md$/, '.html').replaceAll("\\", "/").replace(/index\.html$/, '') },
+      { loc: baseUrl + path.relative("docs", f).replace(/\.md$/, '').replaceAll("\\", "/").replace(/index$/, '').replace(/\/$/, '') },
       { lastmod: s.mtime.toISOString() }
     ]
   }))));
