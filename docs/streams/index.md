@@ -22,3 +22,9 @@ https://stream.companieshouse.gov.uk
 The streams do go down (offline or errors) quite frequently as shown by the many forum posts about error response codes on the stream endpoints.
 
 Companies House disconnects all streams every night (usually around 2-3AM), so you need to make your application reconnect if disconnected.
+
+[About the HTTP streams pattern](./http-streams.md)
+
+## FAQs
+ - [authentication](./faq/authentication.md)
+ - [gateway errors](./faq/gateway-errors.md)

@@ -1,16 +1,9 @@
 ---
-postName: Gateway errors
-tags:
-  - streaming errors
-  - bad gateway
-  - gateway timeout
-title: Gateway errors in Streaming API
-description: Commonly occuring gateway errors in the Companies House Streaming API.
-status: complete
+description: Commonly occurring gateway errors in the Companies House Streaming API.
 ---
 
-# Occasional internal errors
-Companies House seems to have an issue with their API that causes it to occasionally reject requests due to an internal error.
+# Gateway errors in Streaming API - occasional internal errors
+Companies House seems to have an issue with their Streaming API that causes it to occasionally reject requests due to an internal error.
 
 ## 504 Gateway Time-out
 Sometimes a good request is rejected with this response (usually after about 40 seconds):

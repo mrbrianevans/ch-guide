@@ -1,3 +1,7 @@
+---
+description: Companies House produces a bulk product containing a list of companies (by company number) with their SIC codes and current status. This document explains the contents of the file.
+---
+
 # SIC codes bulk file (prod 200)
 
 Prod200 contains a list of companies (by company number) with their SIC codes and current status.

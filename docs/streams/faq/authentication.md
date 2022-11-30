@@ -1,13 +1,5 @@
 ---
-postName: Authentication
-tags:
-  - streaming key
-  - authorisation
-  - authentication
-  - API key
-title: Streaming API Authentication
 description: How to authenticate requests to Companies House streaming API using an API key.
-status: complete
 ---
 
 # Obtaining a key
@@ -37,5 +29,3 @@ If the key is incorrect, you will get a 401 Unauthorised response code with this
 { "error": "Invalid Authorization", "type": "ch:service" }
 ```
 
-# Limitations
-Currently, each Streaming API key is only permitted to connect to two streams concurrently. This is further described in the [Concurrent connections](concurrent-connections) section.
