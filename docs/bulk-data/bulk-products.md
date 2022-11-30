@@ -9,12 +9,12 @@ Please add any more that you are aware of (edit button at bottom of page).
 | Prod101 | Daily Directory Updates with full address                                                 |
 | Prod182 | Directory (related to prod100)                                                            |
 | Prod183 | Directory with full address (related to prod101)                                          |
-| Prod192 | Disqualified officers (weekly snapshot)                                                   |
-| Prod195 | [Company officer appointments snapshot](./officers/)   , only active officers             |
+| Prod192 | [Disqualified officers (weekly snapshot)](./officers/disqualifications)                   |
+| Prod195 | [Company officer appointments snapshot](./officers/), only active officers                |
 | Prod197 | Liquidation Daily Updates                                                                 |
 | Prod198 | [Company officer appointment updates](./officers/update-file/)                            |
 | Prod199 | Mortgage/charges snapshot                                                                 |
-| Prod200 | SIC code snapshot                                                                         |
+| Prod200 | [SIC code snapshot](./prod200.md)                                                         |
 | Prod201 | Mortgages Daily updates                                                                   |
 | Prod202 | Weekly London Gazette                                                                     |
 | Prod203 | COMPANY LAW OFFICIAL NOTIFICATIONS, SUPPLEMENT TO THE EDINBURGH GAZETTE (weekly, rep/dat) |
