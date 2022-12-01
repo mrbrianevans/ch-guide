@@ -35,7 +35,7 @@ The accounts include information such as assets, number of employees and credito
 of each company and the disclosure requirements.
 
 For more details about how to use the data product and what information is included, 
-see the page for [accounts bulk data](/bulk-data/accounts/bulk-file).
+see the page for [accounts bulk data](/bulk-data/accounts/).
 
 
 ## Officers
@@ -43,7 +43,7 @@ The officers bulk file is not publicly available, but can be requested by contac
 via the developer forum, as seen in this thread: https://forum.aws.chdev.org/t/can-we-bulk-download-officer-director-data/1225/194.
 
 Once they have contacted you regarding the bulk file, you will be emailed a link to a cloud storage bucket to download the files,
-and they can also provide a data specification in Microsoft Word format, which is necessary for understanding the proprietary data format.
+and they can also provide a data specification in Microsoft Word format, which is necessary for understanding the fixed width data format.
 
 For more details on the data file, see the page on [officers bulk data](/bulk-data/officers/), and for details on the 
 daily update file see [officers bulk daily updates](officers/update-file/).

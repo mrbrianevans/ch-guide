@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://chguide.co.uk/bulk-data/accounts/bulk-file</loc>
-        <lastmod>2022-08-04T12:53:57.971Z</lastmod>
-    </url>
-    <url>
         <loc>https://chguide.co.uk/bulk-data/accounts</loc>
-        <lastmod>2022-08-29T19:24:44.857Z</lastmod>
+        <lastmod>2022-12-01T12:10:31.221Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/accounts/ixbrl</loc>
-        <lastmod>2022-08-04T12:53:57.972Z</lastmod>
+        <lastmod>2022-12-01T12:08:43.416Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/bulk-products</loc>
-        <lastmod>2022-11-28T18:05:27.172Z</lastmod>
+        <lastmod>2022-12-01T12:08:43.449Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/companies</loc>
         <lastmod>2022-08-04T12:53:57.973Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/bulk-data/directory</loc>
+        <lastmod>2022-11-30T16:30:37.135Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/bulk-data</loc>
-        <lastmod>2022-08-25T09:25:34.250Z</lastmod>
+        <lastmod>2022-12-01T11:20:11.912Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/disqualifications</loc>
@@ -30,7 +30,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers</loc>
-        <lastmod>2022-11-28T19:30:18.852Z</lastmod>
+        <lastmod>2022-12-01T11:20:11.889Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/parser</loc>
@@ -53,6 +53,10 @@
         <lastmod>2022-08-23T14:41:09.266Z</lastmod>
     </url>
     <url>
+        <loc>https://chguide.co.uk/bulk-data/prod200</loc>
+        <lastmod>2022-11-30T18:24:11.595Z</lastmod>
+    </url>
+    <url>
         <loc>https://chguide.co.uk/bulk-data/psc</loc>
         <lastmod>2022-08-04T12:53:57.974Z</lastmod>
     </url>
@@ -62,7 +66,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/</loc>
-        <lastmod>2022-11-28T19:19:40.440Z</lastmod>
+        <lastmod>2022-11-29T11:58:19.186Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/alphabetical-search</loc>
@@ -89,12 +93,8 @@
         <lastmod>2022-08-25T08:53:04.587Z</lastmod>
     </url>
     <url>
-        <loc>https://chguide.co.uk/rest-api/document-api</loc>
-        <lastmod>2022-08-04T12:53:57.979Z</lastmod>
-    </url>
-    <url>
         <loc>https://chguide.co.uk/rest-api/faq/authentication</loc>
-        <lastmod>2022-08-04T12:53:57.981Z</lastmod>
+        <lastmod>2022-11-29T20:50:40.546Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/faq/rate-limiting</loc>
@@ -106,7 +106,7 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api</loc>
-        <lastmod>2022-09-08T17:36:37.783Z</lastmod>
+        <lastmod>2022-11-29T19:45:17.934Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/charges</loc>
@@ -122,19 +122,11 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/faq/authentication</loc>
-        <lastmod>2022-08-04T12:53:57.984Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/faq/concurrent-connections</loc>
-        <lastmod>2022-08-04T12:53:57.984Z</lastmod>
+        <lastmod>2022-11-30T18:30:56.696Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/faq/gateway-errors</loc>
-        <lastmod>2022-08-04T12:53:57.985Z</lastmod>
-    </url>
-    <url>
-        <loc>https://chguide.co.uk/streams/faq</loc>
-        <lastmod>2022-08-04T12:53:57.983Z</lastmod>
+        <lastmod>2022-11-30T18:30:56.625Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/filings</loc>
@@ -142,11 +134,11 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/http-streams</loc>
-        <lastmod>2022-08-04T12:53:57.985Z</lastmod>
+        <lastmod>2022-11-30T18:39:16.678Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams</loc>
-        <lastmod>2022-11-28T18:05:27.176Z</lastmod>
+        <lastmod>2022-11-30T18:38:42.733Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/insolvency-cases</loc>

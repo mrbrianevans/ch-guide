@@ -25,8 +25,8 @@ Please add any more that you are aware of (edit button at bottom of page).
 | Prod215 | (daily, rec ind and ext)                                                                  |
 | Prod216 | ([officers bulk snapshot](./officers/), includes resigned officers)                       |
 | Prod217 | [Company basic data](./companies.md) (monthly, zipped)                                    |
-| Prod223 | [Accounts Bulk Data Product](accounts/bulk-file.md)                                       |
-| Prod224 | [Accounts monthly data](accounts/bulk-file.md) (upon request)                             |
+| Prod223 | [Accounts Bulk Data Product](./accounts/)                                                 |
+| Prod224 | [Accounts monthly data](./accounts/) (upon request)                                       |
 
 For the most part, they follow the same structure of a plain text file where each line is a single record. 
 The file begins with a header record, then has data records on each subsequent line, and then the last line is a trailer record.

@@ -10,10 +10,10 @@ via the developer forum, as seen in [this thread](https://forum.aws.chdev.org/t/
 They will send you a data specification and a link to download the files from a cloud storage bucket.
 
 The data is split into multiple files of ~ 800MB to 1GB. Each file has the `.dat` file extension and is a mixture of 
-fixed width fields and `<` deliminated values.
+fixed width fields and variable width `<` deliminated values.
 
-The official product code for the officer appointments data snapshot is Product 195, 
-and the corresponding update files are Product 198.
+The official product code for the active officer appointments data snapshot is Product 195, 
+and the corresponding update files are Product 198. Product 216 contains all officer appointments, including resigned officers.
 
 ## Data format
 
@@ -47,7 +47,7 @@ A small tool to test parsing records from the bulk file. Detects what type of re
 
 ## Size
 
-This information is based on the April 2021 snapshot:
+This information is based on the April 2021 snapshot of prod 295:
 
 - size of ZIP download from Companies House storage bucket: 1.28GB
 - size of unzipped files: 6.58GB (split into 9 files)
@@ -77,6 +77,7 @@ Some open source parsers I found on GitHub (not tested or verified):
  - [garrettheaver/companieshouse](https://github.com/garrettheaver/companieshouse) (Java)
  - [ft-interactive/companies-house-appointments-importer](https://github.com/ft-interactive/companies-house-appointments-importer) (TypeScript (NodeJS))
 
+There are also many generic fixed width file parsers available which can be used for parsing this file format.
 
 ## Officers update file
 
