@@ -8,7 +8,7 @@ const navigationTree = [
       { text: 'Companies', link: '/bulk-data/companies' },
       { text: 'Persons with significant control', link: '/bulk-data/psc' },
       { text: 'Officers', link: '/bulk-data/officers/' },
-      { text: 'Accounts', link: '/bulk-data/accounts/bulk-file' }
+      { text: 'Accounts', link: '/bulk-data/accounts/' }
     ]
   },
   {

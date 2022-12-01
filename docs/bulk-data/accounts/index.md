@@ -39,3 +39,28 @@ Prod224_0078_00007464_20190930.html
 Only electronically filed accounts are available in the bulk download, and they are in the [iXBRL format](https://www.xbrl.org/the-standard/what/ixbrl/).
 
 For more documentation about interpreting iXBRL and some sample data, see the [iXBRL page](ixbrl.md).
+
+## How many are filed electronically
+I did a sample of 600 random companies to see how many have filed electronic accounts over the last 20 years.
+These are not perfectly accurate, just estimates based on my random sample.
+
+| Year | % electronic  |
+|------|---------------|
+| 2005 | 0.00 %        |
+| 2006 | 0.56 %        |
+| 2007 | 2.89 %        |
+| 2008 | 5.36 %        |
+| 2009 | 9.79 %        |
+| 2010 | 16.05 %       |
+| 2011 | 21.62 %       |
+| 2012 | 25.27 %       |
+| 2013 | 35.93 %       |
+| 2014 | 43.78 %       |
+| 2015 | 47.39 %       |
+| 2016 | 50.45 %       |
+| 2017 | 53.55 %       |
+| 2018 | 61.06 %       |
+| 2019 | 66.19 %       |
+| 2020 | 71.65 %       |
+| 2021 | 70.89 %       |
+| 2022 | 73.78 %       |
