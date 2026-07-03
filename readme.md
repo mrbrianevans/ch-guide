@@ -14,4 +14,4 @@ Documentation is in the `docs` directory.
 Every page should have a `description` set in the frontmatter. This description is used by search engines to work out 
 what the page is about.
 
-The sitemap should be regenerated with `pnpm sitemap` after any articles have been modified, before committing the changes to Git.
+The sitemap should be regenerated with `bun sitemap` after any articles have been modified, before committing the changes to Git.

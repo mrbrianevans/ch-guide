@@ -14,6 +14,8 @@ contact you to arrange it. The official product code/name to reference is Produc
 You will need to provide Companies House with a public SSH key. They will provide you with a password to access the files 
 on the Bulk Cloud Gateway.
 
+Or you can download it over HTTPS from [Companies Catalogue](https://www.companiescatalogue.co.uk/ftp/browser/prod198).
+
 ## Format
 The format of the file is similar to the bulk officers file, which contains a mixture of fixed width data and variable, 
 chevron seperated data.

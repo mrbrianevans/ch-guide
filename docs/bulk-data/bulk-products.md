@@ -1,4 +1,7 @@
 # List of bulk data products
+
+All bulk products are available for free download from [Companies Catalogue](https://www.companiescatalogue.co.uk/ftp/browser).
+
 These are available via FTP from Companies House upon special request. 
 There may be more than what is listed here, this is not an exhaustive list. 
 Please add any more that you are aware of (edit button at bottom of page).

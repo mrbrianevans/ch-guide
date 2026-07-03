@@ -4,10 +4,12 @@ description: A guide to using the officers bulk data file from Companies House.
 
 # Officers bulk data from Companies House
 
-The officers bulk file is not publicly available, but can be requested by contacting Companies House. This can be done
+The officers bulk file is not publicly available from Companies House, but can be requested by contacting Companies House. This can be done
 via the developer forum, as seen in [this thread](https://forum.aws.chdev.org/t/can-we-bulk-download-officer-director-data/1225/194).
 
 They will send you a data specification and a link to download the files from a cloud storage bucket.
+
+Alternatively, you can download it from [Companies Catalogue](https://www.companiescatalogue.co.uk/ftp/browser/prod216) (not affiliated with Companies House).
 
 The data is split into multiple files of ~ 800MB to 1GB. Each file has the `.dat` file extension and is a mixture of 
 fixed width fields and variable width `<` deliminated values.

@@ -10,6 +10,8 @@ It is produced once a week and is available every Saturday.
 
 It is made available over FTP on the Companies House FTP server for bulk products.
 
+It's also available for download from [Companies Catalogue](https://www.companiescatalogue.co.uk/ftp/browser/prod192).
+
 The product code is `prod192`, and the files are located in `free/prod192` on the FTP server, followed by the date path. For example:
 ```
 /free/prod192/2022/11/26/Prod192_3321.txt
