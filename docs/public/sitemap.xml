@@ -2,75 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://chguide.co.uk/bulk-data/accounts</loc>
-        <lastmod>2026-07-03T16:05:29.953Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.927Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/accounts/ixbrl</loc>
-        <lastmod>2026-07-03T16:05:29.953Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.008Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/bulk-products</loc>
-        <lastmod>2026-07-03T16:08:37.680Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.919Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/companies</loc>
-        <lastmod>2026-07-03T16:05:29.954Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.955Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data</loc>
-        <lastmod>2026-07-03T16:15:55.934Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.958Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/disqualifications</loc>
-        <lastmod>2026-07-03T16:12:18.792Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.992Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers</loc>
-        <lastmod>2026-07-03T16:11:41.677Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.994Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/parser</loc>
-        <lastmod>2026-07-03T16:05:29.955Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.968Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/recordTypes</loc>
-        <lastmod>2026-07-03T16:05:29.955Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.074Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/update-file</loc>
-        <lastmod>2026-07-03T16:13:44.596Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.959Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/officers/update-file/personUpdateRecord</loc>
-        <lastmod>2026-07-03T16:05:29.955Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.009Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/prod200</loc>
-        <lastmod>2026-07-03T16:05:29.956Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.922Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/bulk-data/psc</loc>
-        <lastmod>2026-07-03T16:05:29.956Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.936Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/general/company-number</loc>
-        <lastmod>2026-07-03T16:05:29.956Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.063Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/</loc>
-        <lastmod>2026-07-03T16:05:29.956Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.847Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/alphabetical-search</loc>
-        <lastmod>2026-07-03T16:05:29.957Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.895Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/company-profile</loc>
-        <lastmod>2026-07-03T16:05:29.958Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.907Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/filing-history</loc>
-        <lastmod>2026-07-03T16:05:29.958Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.817Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/data-endpoints/registered-office-address</loc>
@@ -82,11 +82,11 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/document-api/filing</loc>
-        <lastmod>2026-07-03T16:05:29.958Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.057Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/faq/authentication</loc>
-        <lastmod>2026-07-03T16:05:29.959Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.062Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api/faq/rate-limiting</loc>
@@ -98,11 +98,11 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/rest-api</loc>
-        <lastmod>2026-07-03T16:05:29.959Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.777Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/charges</loc>
-        <lastmod>2026-07-03T16:05:29.959Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.896Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/companies</loc>
@@ -110,27 +110,27 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/disqualified-officers</loc>
-        <lastmod>2026-07-03T16:05:29.960Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.073Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/faq/authentication</loc>
-        <lastmod>2026-07-03T16:05:29.960Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.099Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/faq/gateway-errors</loc>
-        <lastmod>2026-07-03T16:05:29.960Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.079Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/filings</loc>
-        <lastmod>2026-07-03T16:05:29.960Z</lastmod>
+        <lastmod>2026-07-03T16:19:11.028Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/http-streams</loc>
-        <lastmod>2026-07-03T16:05:29.961Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.782Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams</loc>
-        <lastmod>2026-07-03T16:05:29.961Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.772Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/insolvency-cases</loc>
@@ -138,10 +138,10 @@
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/officers</loc>
-        <lastmod>2026-07-03T16:05:29.961Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.866Z</lastmod>
     </url>
     <url>
         <loc>https://chguide.co.uk/streams/persons-with-significant-control</loc>
-        <lastmod>2026-07-03T16:05:29.961Z</lastmod>
+        <lastmod>2026-07-03T16:19:10.883Z</lastmod>
     </url>
 </urlset>

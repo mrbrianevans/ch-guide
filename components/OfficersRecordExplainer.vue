@@ -96,6 +96,9 @@ export default {
 </template>
 
 <style lang="scss">
+@use "sass:color";
+@use "sass:list";
+
 #officers-record-explainer-input {
   width: 100%;
   background: #0001;
@@ -140,15 +143,15 @@ $colours-list: #f3a683 #63cdda #cf6a87 #f7d794 #778beb #f8a5c2 #786fa6 #e77f67 #
   #e056fd #1dd1a1 #54a0ff #ffda79 #e6194b #3cb44b #ffe119 #4363d8 #f58231 #911eb4 #42d4f4 #f032e6
   #bfef45 #fabed4 #469990 #dcbeff #9a6324 #fffac8 #800000 #aaffc3 #808000 #ffd8b1 #000075 #a9a9a9;
 @each $clr in $colours-list {
-  $i: index($colours-list, $clr);
+  $i: list.index($colours-list, $clr);
   div.record span.segment:nth-child(#{$i}) {
-    background-color: adjust-color($clr, $alpha: -0.5);
+    background-color: color.adjust($clr, $alpha: -0.5);
   }
   div.record span.segment:nth-child(#{$i}):hover {
-    background-color: adjust-color($clr, $alpha: -0.1);
+    background-color: color.adjust($clr, $alpha: -0.1);
   }
   .colour-#{$i} {
-    background-color: adjust-color($clr, $alpha: -0.5);
+    background-color: color.adjust($clr, $alpha: -0.5);
   }
 }
 

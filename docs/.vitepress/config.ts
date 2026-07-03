@@ -24,6 +24,15 @@ const navigationTree = [
  * @type {import("vitepress").UserConfig}
  */
 const config: UserConfig = {
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
   title: "CH Guide",
   description: "Unofficial Companies House developer guide",
   outDir: "../build",

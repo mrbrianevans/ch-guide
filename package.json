@@ -11,12 +11,12 @@
     "format": "oxfmt"
   },
   "dependencies": {
-    "camelcase": "^7.0.1"
+    "camelcase": "^9.0.0"
   },
   "devDependencies": {
     "oxfmt": "^0.57.0",
     "sass": "^1.101.0",
-    "vitepress": "1.0.0-alpha.29",
+    "vitepress": "1.6.4",
     "vue": "^3.5.39",
     "xml": "^1.0.1"
   }

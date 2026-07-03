@@ -21,18 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install PNPM
-        run: curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@7 && pnpm config set store-dir .pnpm-store
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-          cache: pnpm
+        uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
       - name: Install dependencies
-        run: pnpm install
-      - name: Build with package.json build script
-        run: pnpm run build
+        run: bun install --frozen-lockfile
+      - name: Build
+        run: bun run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
