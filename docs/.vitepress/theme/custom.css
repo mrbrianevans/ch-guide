@@ -1,13 +1,16 @@
+/**
+ * Override default theme CSS variables.
+ * https://vitepress.dev/guide/extending-default-theme#customizing-css
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
 :root {
-  --vp-c-brand: #e9451e;
-  --vp-c-brand-light: #ee795c;
-  --vp-c-brand-lighter: #ee795cff;
-  --vp-c-brand-dark: #d2360d;
-  --vp-c-brand-darker: #d2360dff;
+  --vp-c-brand-1: #e9451e;
+  --vp-c-brand-2: #ee795c;
+  --vp-c-brand-3: #d2360d;
+  --vp-c-brand-soft: rgba(233, 69, 30, 0.14);
   --vp-code-block-bg: #f2f2f2;
 }
 
-/* to use in dark theme */
 .dark {
   --vp-code-block-bg: #2b2b2c;
 }
