@@ -11,15 +11,17 @@ Companies House offers some REST API endpoints to retrieve public data about com
 Link to [Official documentation](https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference).
 
 ## APIs
+
 - [Filing history](data-endpoints/filing-history.md)
 - [Company profile](data-endpoints/company-profile.md)
 - [Alphabetical search](data-endpoints/alphabetical-search.md)
 - [Registered office address](data-endpoints/registered-office-address.md)
 
-
 ## Document API
+
 In addition to standard REST endpoints which return JSON data, there is a document API which can be used to retrieve filed documents.
 See [document-api/filing](document-api/filing.md) for a guide on how to use it, and the [official reference documentation](https://developer-specs.company-information.service.gov.uk/document-api/reference).
 
 ## FAQs
- - [authentication](./faq/authentication.md)
+
+- [authentication](./faq/authentication.md)

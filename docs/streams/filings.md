@@ -68,4 +68,4 @@ by [companies house in a YAML key-value map](/companieshouse/api-enumerations/bl
 with `{}` braces to format the values in. For example, a value could
 be `**Notification** of {psc_name} as a person with significant control on {notification_date}`. Note the `**` to
 indicate a title, and the `{psc_name}` to indicate a value should go there. This value can be found in the previously
-mentioned map of values sent with the event. The title section is usually displayed in bold for emphasis. 
+mentioned map of values sent with the event. The title section is usually displayed in bold for emphasis.

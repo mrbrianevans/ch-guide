@@ -6,8 +6,8 @@ description: The charges stream sends events when a charge is registered or sati
 
 Debentures and fixed charges.
 
-
 Sample event:
+
 ```json
 {
   "resource_kind": "company-charges",

@@ -9,6 +9,7 @@ The inline XML business reporting language format is used for most financial acc
 iXBRL adds special XML tags to HTML which contain the reported information in a machine-readable way.
 
 For example, a piece of information (fact) in the file might look like this:
+
 ```xml
 <td
         class="Continuous_Section_Values_Text"
@@ -26,9 +27,9 @@ For example, a piece of information (fact) in the file might look like this:
     </p>
 </td>
 ```
+
 It has enough information to display the data as HTML, and also has the special `ix:nonfraction` tag which has machine-readable attributes.
 
 Although these values are machine-readable, it is a very complex format of taxonomies and references and so writing a parser is non-trivial.
 
 [Arelle](https://arelle.org) is an open-source XBRL parser that can convert iXBRL files to CSV or JSON, making the data easier to manipulate in a programming language.
-

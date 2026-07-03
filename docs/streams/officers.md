@@ -6,7 +6,8 @@ description: The officers stream provides updates to the officers database, such
 
 Update to directory/secretary appointment or details.
 
-Sample event: 
+Sample event:
+
 ```json
 {
   "resource_kind": "company-officers",

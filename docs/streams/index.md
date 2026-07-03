@@ -1,18 +1,20 @@
 # Streams
 
-Companies House offers a Streaming API which streams events in real time, such as updates to company profiles or accounts filings. 
+Companies House offers a Streaming API which streams events in real time, such as updates to company profiles or accounts filings.
 This can be used to keep a database in sync with Companies House and always have the latest data, without waiting for the monthly bulk file of company profiles to be produced.
 
 There are currently seven streams (each with their own endpoint):
- - [`companies`](companies.md)
- - [`filings`](filings.md)
- - [`officers`](officers.md)
- - [`persons-with-significant-control`](persons-with-significant-control.md)
- - [`charges`](charges.md)
- - [`insolvency-cases`](insolvency-cases.md)
- - [`disqualified-officers`](disqualified-officers.md)
+
+- [`companies`](companies.md)
+- [`filings`](filings.md)
+- [`officers`](officers.md)
+- [`persons-with-significant-control`](persons-with-significant-control.md)
+- [`charges`](charges.md)
+- [`insolvency-cases`](insolvency-cases.md)
+- [`disqualified-officers`](disqualified-officers.md)
 
 The base URL for all of them is:
+
 ```
 https://stream.companieshouse.gov.uk
 ```
@@ -26,5 +28,6 @@ Companies House disconnects all streams every night (usually around 2-3AM), so y
 [About the HTTP streams pattern](./http-streams.md)
 
 ## FAQs
- - [authentication](./faq/authentication.md)
- - [gateway errors](./faq/gateway-errors.md)
+
+- [authentication](./faq/authentication.md)
+- [gateway errors](./faq/gateway-errors.md)

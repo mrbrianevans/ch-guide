@@ -13,31 +13,34 @@ It is made available over FTP on the Companies House FTP server for bulk product
 It's also available for download from [Companies Catalogue](https://www.companiescatalogue.co.uk/ftp/browser/prod192).
 
 The product code is `prod192`, and the files are located in `free/prod192` on the FTP server, followed by the date path. For example:
+
 ```
 /free/prod192/2022/11/26/Prod192_3321.txt
 ```
 
-The data format is Companies House custom format, similar to the officers bulk file. 
+The data format is Companies House custom format, similar to the officers bulk file.
 New line seperated records, comprised of fixed width columns and followed by variable width, chevron seperated data.
 (see the sample below)
 
 ## Data
+
 The information contained in the file:
- - person details for disqualified officer (date of birth, name, address, nationality etc.)
- - disqualification details (start and end dates, company disqualified from, reason for disqualification etc.)
- - exemption details (when a disqualified officer is given permission to act, duration and company names are provided)
- - variations
+
+- person details for disqualified officer (date of birth, name, address, nationality etc.)
+- disqualification details (start and end dates, company disqualified from, reason for disqualification etc.)
+- exemption details (when a disqualified officer is given permission to act, duration and company names are provided)
+- variations
 
 ## Differences between bulk and API
+
 There is slightly different data available from the REST API than what is found in the bulk file.
 
 |                       | API       | Bulk file                  |
-|:----------------------|-----------|----------------------------|
+| :-------------------- | --------- | -------------------------- |
 | Name honours          | Includes  | Does not include           |
 | Reason description    | Includes  | Does not include           |
 | Premises              | Specified | Merged with address line 1 |
 | Exemptions court name | Includes  | Does not include           |
-
 
 ## Sample
 
@@ -51,6 +54,6 @@ DISQUALS332120221126
 3281472990001202103302024033100000000030015DONKEYSTONE LTD
 3281472990001202103302024033100000000030017PITT PROPERTY LTD
 3281472990001202103302024033100000000030021M60 TOOL HIRE LIMITED
-3281472990001202103302024033100000000030023CHLOE PITT PROPERTY LLP                                                                                                                               
+3281472990001202103302024033100000000030023CHLOE PITT PROPERTY LLP
 DISQUALS/00000002/00000003/00000004/00000000/00000009
 ```

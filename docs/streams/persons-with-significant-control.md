@@ -7,6 +7,7 @@ description: The persons with significant control stream provides events when a 
 Updates to person with significant control, long running HTTP request.
 
 Sample event:
+
 ```json
 {
   "resource_kind": "company-psc-individual",

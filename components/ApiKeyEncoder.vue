@@ -1,36 +1,36 @@
 <template>
-  <input placeholder="paste your key here" v-model="key" class="key-input"/>
+  <input placeholder="paste your key here" v-model="key" class="key-input" />
   <code v-if="show" class="header">Authorization: Basic {{ encoded }}</code>
 </template>
 
 <script>
 export default {
   name: "ApiKeyEncoder",
-  data(){
+  data() {
     return {
-      key: ''
-    }
+      key: "",
+    };
   },
-  computed : {
-      show(){
-        return this.key.trim().length === 36
-      },
-    encoded(){
-        return window.btoa(this.key.trim()+':')
-    }
-  }
+  computed: {
+    show() {
+      return this.key.trim().length === 36;
+    },
+    encoded() {
+      return window.btoa(this.key.trim() + ":");
+    },
+  },
 };
 </script>
 
 <style scoped>
-.key-input{
+.key-input {
   width: 100%;
   background: #0001;
   border: 2px solid #0006;
   font-family: var(--vp-font-family-mono);
   font-size: 16px;
 }
-code.header{
+code.header {
   background: #0002;
   border-radius: 4px;
   padding: 4px;

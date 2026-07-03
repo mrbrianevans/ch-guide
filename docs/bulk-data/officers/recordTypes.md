@@ -3,6 +3,7 @@ description: Companies House provides a bulk file of companies and officers. The
 ---
 
 # Officer bulk data record types
+
 For more general information about the officers bulk file, see [officers bulk file](index.md).
 
 There are 4 types of record found in the officer bulk data files:
@@ -11,7 +12,6 @@ There are 4 types of record found in the officer bulk data files:
 - person record
 - company record
 - trailer record
-
 
 The header record says what date the data was captured.
 
@@ -79,13 +79,12 @@ company records (whereas it's a `2` for person records).
 The next character is a single character to represent the status of the company. It follows this mapping:
 
 | Value      | Status                       |
-|------------|------------------------------|
+| ---------- | ---------------------------- |
 | `C`        | Converted/closed company     |
 | `D`        | Dissolved company            |
 | `L`        | Company in liquidation       |
 | `R`        | Company in receivership      |
 | ` `(space) | None of the above categories |
-
 
 So in the example above, the company status is either converted or closed because the character is a `C`.
 
@@ -102,47 +101,46 @@ Next is the variable length name, and a `<` chevron at the end of the line.
 
 This table is the official documentation of the data specification provided by Companies House, and the explainations that follow are modified from the documentations.
 
-| Character | Data category | 	Length     | Data Item                                                                         |
-|-----------|---------------|-------------|-----------------------------------------------------------------------------------|
-| 1         | 	X            | 	8          | 	Company Number                                                                   |	
-| 9         | 	9            | 	1          | 	Record Type                                                                      |	
-| 10        | 	X            | 	1          | 	App Date Origin	                                                                 |
-| 11        | 	9            | 	2          | 	Appointment Type	                                                                |
-| 13        | 	9            | 	12         | 	Person Number                                                                    |	
-| 25        | 	X            | 	1          | 	Corporate indicator	                                                             |
-| 26        | 	X            | 	7          | 	Filler	                                                                          |
-| 33        | 	X            | 	8          | 	Appointment Date	                                                                |
-| 41        | 	X            | 	8          | 	Resignation Date	                                                                |
-| 49        | 	X            | 	8          | 	Person Postcode                                                                  |	
-| 57        | 	X            | 	8          | 	Partial Date of Birth	                                                           |
-| 65        | 	X            | 	8          | 	Full Date of Birth	                                                              |
-| 73        | 	9            | 	4          | 	Variable Data Length                                                             |	
-| 77        | 	X            | 	1125 (max) | 	Variable Data (Name/ Address/ Occupation Nationality/Usual Residential Country ) |	
-
+| Character | Data category | Length     | Data Item                                                                        |
+| --------- | ------------- | ---------- | -------------------------------------------------------------------------------- |
+| 1         | X             | 8          | Company Number                                                                   |
+| 9         | 9             | 1          | Record Type                                                                      |
+| 10        | X             | 1          | App Date Origin                                                                  |
+| 11        | 9             | 2          | Appointment Type                                                                 |
+| 13        | 9             | 12         | Person Number                                                                    |
+| 25        | X             | 1          | Corporate indicator                                                              |
+| 26        | X             | 7          | Filler                                                                           |
+| 33        | X             | 8          | Appointment Date                                                                 |
+| 41        | X             | 8          | Resignation Date                                                                 |
+| 49        | X             | 8          | Person Postcode                                                                  |
+| 57        | X             | 8          | Partial Date of Birth                                                            |
+| 65        | X             | 8          | Full Date of Birth                                                               |
+| 73        | 9             | 4          | Variable Data Length                                                             |
+| 77        | X             | 1125 (max) | Variable Data (Name/ Address/ Occupation Nationality/Usual Residential Country ) |
 
 **Company number**: 8 character string, usually only containing numeric digits, but sometimes prefixed/suffixed with alphabet letters.
 
 **Record type**: `2` for all person records (`1` for company records).
 
-**App date origin**: 
+**App date origin**:
 This character can take one of six possible values, their meanings described in the table below:
 
 | Value | Description                                                                                                                                         |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1     | Appointment date taken from appointment document (includes 288a, AP01, AP02, AP03, AP04, RR01**, NI form 296, SEAP01, and SEAP02)                   |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Appointment date taken from appointment document (includes 288a, AP01, AP02, AP03, AP04, RR01\*\*, NI form 296, SEAP01, and SEAP02)                 |
 | 2     | Appointment date taken from Annual Return (form 363)                                                                                                |
 | 3     | Appointment date taken from incorporation document (includes form 10, IN01, NI form 21, SEFM01, SEFM02, SEFM03, SEFM04, SEFM05, SECV01, and SETR02) |
 | 4     | Appointment date taken from LLP appointment document (includes LLP288a, LLAP01, LLAP02, and NI form LLP296a)                                        |
 | 5     | Appointment date taken from LLP incorporation document (includes LLP2, and LLIN01)                                                                  |
 | 6     | Appointment date taken from overseas company appointment document (includes BR4, OSAP01, OSAP02, OSAP03, and OSAP04)                                |
 
-**	Appointment of secretary on re-registration from private company to PLC.
+\*\* Appointment of secretary on re-registration from private company to PLC.
 
 **Appointment type**:
 Two digits which can take one of ten possible values, their meanings described in the table below:
 
 | Value | Description                                                   |
-|-------|---------------------------------------------------------------|
+| ----- | ------------------------------------------------------------- |
 | 00    | Current Secretary                                             |
 | 01    | Current Director                                              |
 | 04    | Current non-designated LLP Member                             |
@@ -171,7 +169,7 @@ A similar incrementation would take place if `Miss Jane Harris` changed her name
 
 **Person postcode**: Current postcode for officer Service Address.
 
-**Partial date of birth**: Partial Date of Birth field will contain either all spaces, or a partial date of birth (century, year, month) followed by 2 space characters in the format `CCYYMM  `.  If Full Date of Birth is provided then Partial Date of Birth will also be provided.  However, Partial Date of Birth may be provided without Full Date of Birth.
+**Partial date of birth**: Partial Date of Birth field will contain either all spaces, or a partial date of birth (century, year, month) followed by 2 space characters in the format `CCYYMM  `. If Full Date of Birth is provided then Partial Date of Birth will also be provided. However, Partial Date of Birth may be provided without Full Date of Birth.
 
 **Full date of birth**: If full date of birth is available, its in the format described in [date format](#date-format), otherwise its just 8 spaces.
 
@@ -181,17 +179,18 @@ A similar incrementation would take place if `Miss Jane Harris` changed her name
 `TITLE<FORENAMES<SURNAME<HONOURS<CARE OF<PO BOX<ADDRESS LINE 1<ADDRESS LINE 2<POST TOWN<COUNTY<COUNTRY<OCCUPATION<NATIONALITY<USUAL RESIDENTIAL COUNTRY<`
 
 Each element of the variable data can be a maximum of 50 characters except SURNAME, CARE OF, PO BOX, ADDRESS LINE 1, USUAL RESIDENTIAL COUNTRY, OCCUPATION and NATIONALITY;
-* SURNAME and USUAL RESIDENTIAL COUNTRY can both be a maximum of 160 characters;
-* OCCUPATION and NATIONALITY can both be a maximum of 40 characters.
-* CARE OF can be a maximum of 100 characters.
-* PO BOX can be a maximum of 10 characters.
-* ADDRESS LINE 1 can be a maximum of 251 characters.
+
+- SURNAME and USUAL RESIDENTIAL COUNTRY can both be a maximum of 160 characters;
+- OCCUPATION and NATIONALITY can both be a maximum of 40 characters.
+- CARE OF can be a maximum of 100 characters.
+- PO BOX can be a maximum of 10 characters.
+- ADDRESS LINE 1 can be a maximum of 251 characters.
 
 Each variable data field will contain 14 “<” delimiters.
 Consecutive “<” delimiters indicates that the particular element of the variable data is not present.
 
-
 ## Date format
-Date fields will contain either spaces or an actual date in the format CCYYMMDD.  The value spaces will signify that Companies House does not have an actual date for that item.
+
+Date fields will contain either spaces or an actual date in the format CCYYMMDD. The value spaces will signify that Companies House does not have an actual date for that item.
 
 Example: `20220810` represents 10 August 2022.

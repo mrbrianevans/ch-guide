@@ -9,6 +9,7 @@ This stream was introduced around August 2022.
 Events on this stream are very rare.
 
 Sample event:
+
 ```json
 {
   "resource_kind": "disqualified-officer-natural",
@@ -25,7 +26,7 @@ Sample event:
           "postal_code": "N11 3AA"
         },
         "case_identifier": "INV6358033",
-        "company_names": [ "ASH ELECTRIC LIMITED" ],
+        "company_names": ["ASH ELECTRIC LIMITED"],
         "disqualification_type": "undertaking",
         "disqualified_from": "2022-08-04",
         "disqualified_until": "2028-08-03",

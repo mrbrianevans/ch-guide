@@ -1,4 +1,5 @@
 # Filings Document API
+
 ## Introduction
 
 Companies House provides an API to retrieve documents such as accounts or other types of filings. They are referenced by
@@ -18,8 +19,7 @@ This responds with an object in this shape:
   "total_count": 8,
   "filing_history_status": "filing-history-available",
   "start_index": 0,
-  "items": [
-  ],
+  "items": [],
   "items_per_page": 25
 }
 ```
@@ -66,18 +66,18 @@ eg `Accept: application/pdf`).
 A simple example in JavaScript:
 
 ```javascript
-import { request } from 'https'
+import { request } from "https";
 
 const options = {
-  host: 'document-api.companieshouse.gov.uk', 
-  path: '/document/DR2uueIff1_ydir2xBw6ilyEjTTbN-s2b64v1wpqGl0/content', 
-  auth: process.env.APIUSER + ':', 
-  headers: {accept: 'application/xhtml+xml'}
-}
+  host: "document-api.companieshouse.gov.uk",
+  path: "/document/DR2uueIff1_ydir2xBw6ilyEjTTbN-s2b64v1wpqGl0/content",
+  auth: process.env.APIUSER + ":",
+  headers: { accept: "application/xhtml+xml" },
+};
 request(options, (response) => {
-  console.log('Status code', response.statusCode, response.statusMessage)
-  response.pipe(process.stdout) // print out response
-})
+  console.log("Status code", response.statusCode, response.statusMessage);
+  response.pipe(process.stdout); // print out response
+});
 ```
 
 PDFs can possibly be read using [PDF.js](https://github.com/mozilla/pdf.js)

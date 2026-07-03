@@ -9,10 +9,7 @@ sidebar: false
 import OfficersRecordExplainer from '../../../components/OfficersRecordExplainer.vue'
 </script>
 
-
-
 <div style="width: 95%;margin: auto;">
-
 
 [View officers bulk file documentation](index.md)
 

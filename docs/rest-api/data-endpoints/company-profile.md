@@ -1,12 +1,15 @@
 ---
 description: Companies House REST API endpoint for retrieving company profile information by company number, such as company name, date of creation, company type and status.
 ---
+
 # Get company profile endpoint
+
 This is an unofficial supplement to the [official documentation](https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference/company-profile/company-profile).
 
-This endpoint returns company profile details for a given company number. 
+This endpoint returns company profile details for a given company number.
 
 ## Url
+
 The endpoint URL format is: `https://api.company-information.service.gov.uk/company/{companyNumber}` where `{companyNumber}` is an 8 character [company number](/general/company-number.md). For example:
 
 ```
@@ -30,9 +33,7 @@ Returns:
   "status": "active",
   "last_full_members_list_date": "2016-01-30",
   "has_been_liquidated": false,
-  "sic_codes": [
-    "98000"
-  ],
+  "sic_codes": ["98000"],
   "accounts": {
     "accounting_reference_date": {
       "day": "31",
@@ -80,4 +81,5 @@ Returns:
   "can_file": true
 }
 ```
+
 Responses contain enum constants for some fields (`company_status`,`jurisdiction`,`status`,`sic_codes`,`type`) which can be found here: https://github.com/companieshouse/api-enumerations/blob/master/constants.yml
