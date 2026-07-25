@@ -75,6 +75,8 @@ More details about each of the record types can be found in [officers/record typ
 
 ## Parsers
 
+High performance web-based and CLI parser: [mrbrianevans/ch-fixedwidth](https://mrbrianevans.github.io/ch-fixedwidth/).
+
 Some open source parsers I found on GitHub (not tested or verified):
 
 - [mattattui/chDirectorsParser](https://github.com/mattattui/chDirectorsParser) (PHP)
