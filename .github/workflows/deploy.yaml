@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # full history so "last updated" and sitemap lastmod use each page's real last commit
       - uses: actions/setup-node@v6
         with:
           node-version: 26

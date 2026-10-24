@@ -20,6 +20,15 @@ const navigationTree = [
   },
 ];
 
+const siteUrl = "https://chguide.co.uk/";
+
+/** "bulk-data/index.md" -> "bulk-data/", "streams/officers.md" -> "streams/officers", "index.md" -> "" */
+const pageUrlPath = (relativePath: string) =>
+  relativePath.replace(/(^|\/)index\.md$/, "$1").replace(/\.md$/, "");
+
+// URL paths of pages with `noindex: true` frontmatter, collected while page data is transformed
+const noindexUrls = new Set<string>();
+
 /**
  * @type {import("vitepress").UserConfig}
  */
@@ -56,11 +65,20 @@ const config: UserConfig = {
     ],
   },
   cleanUrls: true,
-  transformHead(ctx) {
-    // can be used to add a head tag to every page pointing to a canonical URL for google crawl bots
-    return [
-      // ['link', {rel:'canonical', href:'https://chguide.co.uk/'+ctx.pageData.relativePath.replace(/\.md$/, '')}]
-    ];
+  sitemap: {
+    hostname: siteUrl,
+    // keep pages marked `noindex: true` in frontmatter out of the sitemap
+    transformItems: (items) => items.filter((item) => !noindexUrls.has(item.url)),
+  },
+  transformPageData(pageData) {
+    const path = pageUrlPath(pageData.relativePath);
+    pageData.frontmatter.head ??= [];
+    // tell Google which URL is the real one (GitHub Pages also serves /page.html and redirects /dir to /dir/)
+    pageData.frontmatter.head.push(["link", { rel: "canonical", href: siteUrl + path }]);
+    if (pageData.frontmatter.noindex) {
+      noindexUrls.add(path);
+      pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]);
+    }
   },
 };
 
