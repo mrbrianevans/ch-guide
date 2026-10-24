@@ -2,6 +2,7 @@
   "name": "ch-guide",
   "version": "1.0.0",
   "author": "Brian Evans",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs",
@@ -15,7 +16,7 @@
   },
   "devDependencies": {
     "sass": "^1.106.1",
-    "vitepress": "1.6.4",
+    "vitepress": "^2.0.0-alpha.20",
     "vue": "^3.5.44",
     "xml": "^1.0.1"
   }

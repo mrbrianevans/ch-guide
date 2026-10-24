@@ -26,11 +26,7 @@ const navigationTree = [
 const config: UserConfig = {
   vite: {
     css: {
-      preprocessorOptions: {
-        scss: {
-          api: "modern-compiler",
-        },
-      },
+      preprocessorOptions: {},
     },
   },
   title: "CH Guide",
@@ -59,7 +55,7 @@ const config: UserConfig = {
       },
     ],
   },
-  cleanUrls: "without-subfolders",
+  cleanUrls: true,
   transformHead(ctx) {
     // can be used to add a head tag to every page pointing to a canonical URL for google crawl bots
     return [
