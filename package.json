@@ -7,17 +7,16 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "sitemap": "node generateSitemap.mjs",
-    "format": "oxfmt"
+    "sitemap": "bun generateSitemap.mjs",
+    "format": "bun fmt"
   },
   "dependencies": {
-    "camelcase": "^9.0.0"
+    "camelcase": "^10.0.0"
   },
   "devDependencies": {
-    "oxfmt": "^0.57.0",
-    "sass": "^1.101.0",
+    "sass": "^1.106.1",
     "vitepress": "1.6.4",
-    "vue": "^3.5.39",
+    "vue": "^3.5.44",
     "xml": "^1.0.1"
   }
 }
